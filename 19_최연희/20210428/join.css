@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'BBTreeGB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title{
+    font-family: 'BBTreeGB';
+}
+
+#joinpage{
+    width:1000px;
+    margin: 0 auto;
+}
+
+#box{
+    width:1000px;
+    margin: 0 auto 0 auto;
+    border: 1px;
+    border-color: #e4e4e4;
+    background-color: #fbfbfb;
+    text-align: center;
+}
+
+p{
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    text-align: left;
+}
+
+.sex {
+    font-size: 12px;
+    color: #000;
+}
+
+#num{
+    border: 1px;
+    border-color: #08a600;
+    font-size: 12px;
+    color: #fff;
+    background-color: #4ec53d;
+}
+
+#join{
+    border: 1px;
+    border-color: #08a600;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4ec53d;
+    margin-top: 10px;
+}
+
+.checkbox{
+    font-size: 12px;
+    color: #000;
+}
+
+.content{
+    font-size: 12px;
+    color: #000;
+}
+
+#userid, #userpw, #username,  #email,  #usernumber, #join, #greeting{
+    width: 980px;
+    height: 20px;
+}
+
+#usernum{
+    width: 825px;
+    height: 20px;
+}
+
+#birth{
+    width: 325px;
+    height: 20px;
+}
+
+#greeting{
+    width: 980px;
+    height: 85px;
+}
+
+#num{
+    width: 150px;
+    height: 30px;
+}
+
+#join{
+    width: 990px;
+    height: 30px;
+}
+
+.hobby, .gender{
+    display: inline-block;
+    width: 90px;
+}
+
+.left{
+    text-align: left;
+}

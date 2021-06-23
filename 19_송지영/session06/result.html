@@ -1,0 +1,14 @@
+<body>
+    작성글 - {{text}}
+    <br>
+   전체 글자수 - {{total_len}}
+   <br>
+   공백 제외 글자 수 - {{blank_no}}
+    <br>
+    ----단어 리스트----
+    <br>
+    {% for i in split_list %}
+        {{i}} 
+    <br>
+    {% endfor %}
+</body>

@@ -1,0 +1,136 @@
+
+body{
+
+}
+#container{
+    background-color: #000;
+    margin: 0px;
+}
+
+#header{
+    width: 100%;
+    height: 8vh;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#header div{
+    border: 2px solid rgba(190, 38, 46, 0.726);
+}
+#header div div{
+    background-color: black;
+    color: white;
+    height: 3vh;
+    text-align: center;
+    line-height: 3vh;
+    padding: 2px;
+    border: 1px solid black;
+    margin: 2px;
+}
+#leftheader{
+    display: flex;
+    padding-left: 50px;
+}
+#centerheader{
+    display: flex;
+    width: 650px;
+}
+.search{
+    flex: 100%;
+    min-width: 85px;
+}
+#rightheader{
+    display: flex;
+    padding-right: 50px;
+}
+
+
+#center{
+    display: flex;
+}
+
+
+#sidebar{
+    flex: 15%;
+    height: 90vh;
+    background-color: #555;
+    display: flex;
+    flex-flow: column;
+    overflow-y:scroll;
+    min-width: 230px;
+}
+#subscriptions, #basic-setting, #more-from-youtube{
+    border: 3px solid rgb(72, 99, 255);
+}
+.subheading{
+    color:white;
+}
+#sidebar>div>div{
+    display: flex;
+    justify-content: space-around;
+}
+.side-menu{
+    height: 7vh;
+    line-height: 7vh;
+    text-align: center;
+}
+.side-menu .icon{
+    border: 1px solid white;
+    background-color: pink;
+    width: 7vh;
+}
+.side-menu-title{
+    border: 1px solid white;
+    background-color: burlywood;
+    width: 25vh;
+}
+.border-line{
+    border: 2px solid black;
+    margin: 5px 8px;
+}
+
+#main{
+    flex: 75%;
+}
+#maincontainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow-y: scroll;
+    height: 90vh;
+    margin: 0px 35px;
+}
+.content{
+    background-color: white;
+    height: 32vh;
+    width: 35vh;
+    margin-top: 35px;
+}
+.details{
+    display: flex;
+}
+.thumbnail{
+    background-color: #555;
+    color: white;
+    text-align: center;
+    height: 20vh;
+    line-height: 20vh;
+    width: 35vh;
+}
+.details .icon{
+    border: 1px solid white;
+    background-color: pink;
+    text-align: center;
+    height:7vh;
+    line-height: 7vh;
+    flex:20%;
+}
+.details .videotitle{
+    border: 1px solid white;
+    background-color: teal;
+    text-align: center;
+    flex: 80%;
+    height: 11vh;
+    line-height: 11vh;
+}

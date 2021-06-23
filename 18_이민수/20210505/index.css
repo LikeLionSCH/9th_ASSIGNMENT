@@ -1,0 +1,91 @@
+* { box-sizing: border-box;}
+body {margin:0;}
+a {text-decoration: none;}
+
+
+.header {
+  
+  display: flex;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+.header_content{
+  background-color: skyblue;
+  display: flex;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+.menu {
+  width: 5%;
+}
+.logo {
+  width: 10%;
+}
+.search {
+  width: 60%;
+}
+.upload {
+  width: 5%;
+}
+.app {
+  width: 5%;
+}
+.alarm {
+  width: 5%;
+}
+.profile {
+  width: 10%;
+}
+.container {
+  display: flex;
+  border: 1px solid black;
+  height: 100%;
+  margin: 5px;
+}
+.side_bar {
+  display: flex;
+  flex-direction: column;
+  flex: 15%;
+  border: 1px solid black;
+
+}
+.side_content {
+  background-color: pink;
+  display: flex;
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  flex: 85%;
+  border: 1px solid black;
+}
+.video {
+  background-color: lightgray;
+  width: 23%;
+  height: 28%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-end;
+  border: 1px solid black;
+}
+.profile_photo {
+  display: flex;
+  border: 1px solid black;
+  width: 15%;
+  margin: 5px;
+  padding: 5px;
+}
+
+.video_title {
+  display: flex;
+  border: 1px solid black;
+  width: 75%;
+  margin: 5px;
+  padding: 5px;
+}

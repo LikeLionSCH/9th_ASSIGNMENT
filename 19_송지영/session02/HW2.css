@@ -1,0 +1,76 @@
+.header{
+    height: 50px;
+    width: 100%;
+    display: flex;
+  }
+
+.menu{
+  width: 5%;
+  border: 1px solid black;
+}
+
+.logo{
+  width: 10%;
+  border: 1px solid black;
+}
+
+.search{
+  width: 70%;
+  border: 1px solid black;
+}
+
+.making{
+  width: 5%;
+  border: 1px solid black;
+}
+
+.app{
+  width: 5%;
+  border: 1px solid black;
+}
+
+.profile{
+  width: 5%;
+  border: 1px solid black;
+}
+
+  .container{
+    display: flex;
+    height: 400px;
+    border: 1px solid black;
+  }
+
+  .side{
+    width: 40%;
+  }
+
+  .home, .side_search, .subscribe, .storage, .history, .my_video, .saving_video, .good_video{
+    border: 1px solid black;
+    height: 10%;
+  }
+  .subscribe_user{
+    border: 1px solid black;
+    height: 16%;
+  }
+
+  .main{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+  }
+
+  .content{
+    width: 20%;
+    height: 40%;
+    margin: 20px;
+    margin-left:32px;
+  }
+  .video{
+    height: 70%;
+    border: 1px solid black;
+  }
+  .video_title{
+    height: 30%;
+    border: 1px solid black;
+  }

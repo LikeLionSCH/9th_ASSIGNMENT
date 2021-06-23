@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#inner {
+    width: 970px;
+    background-color: #fbfbfb;
+    border: 1px #e4e4e4;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#join {
+    width: 970px;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: left;
+    color: #000;
+    font-weight: bold;
+    font-family: 'GyeonggiBatang';
+}
+
+.main {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    font-family: 'GyeonggiBatang';
+    text-align: left;
+}
+
+.input {
+    width: 950px;
+    font-family: 'GyeonggiBatang';
+    font-size: 12px;
+    color: #000;
+}
+
+.year {
+    width: 315px;
+}
+
+.gender {
+    display: inline-block;
+    width: 80px;
+}
+
+#phone{
+    width: 863px;
+}
+
+.emailnum {
+    width: 950px;
+}
+
+#phonebutton {
+    background-color: #4ec53d;
+    border: 1px #08a600;
+    font-family: 'GyeonggiBatang';
+    font-size: 12px;
+    color: #fff; 
+}
+
+.hobby {
+    display: inline-block;
+    width: 80px;
+}
+
+#summit {
+    background-color: #4ec53d;
+    border: 1px #08a600;
+    font-family: 'GyeonggiBatang';
+    font-size: 16px;
+    color: #fff; 
+    width: 950px;
+
+}
+
+.left {
+    text-align: left;
+}

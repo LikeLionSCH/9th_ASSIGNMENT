@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stlyesheet" href="join.css">
+</head>
+<body>
+    <div class="container">
+    <div class="title" id="sign">회원가입</div>
+    <form action="my-app" method="get">
+        <div class="title">
+                <label for="userid">아이디</label><br>
+                <input type="text" name="id" id="userid" class="info">
+        </div>
+        <div class="title">
+                <label for="userpw">비밀번호</label><br>
+               <input type="text" name="pw" pw="userpw" class="info">
+        </div>
+        <div class="title">
+                <label for="username">이름</label><br>
+                <input type="text" name="name" name="username" class="info">
+        </div>
+        <div class="title">
+                <label for="birthday">생년월일</label><br>        
+            <select name="year">
+                <option value="">년도</option>
+            </select>
+            <select name="month">
+                <option value="">월</option>
+            </select>
+            <select name="day">
+                <option value="">일</option>
+            </select>
+        </div>
+        <div class="title">
+                <label for="sex">성별</label><br>
+                <input type="radio" name="chk_info" value="남자" class="sex">남자
+                <input type="radio" name="chk_info" value="여자" class="sex">여자
+        </div>
+        <div class="title">
+                <label for="user email">이메일</label><br>
+                    <input type="text" placeholder="이메일 주소에'@'를 포함해 주세요." name="mail" mail="user email" class="info">
+        </div>
+        <div class="title">
+                <label for="user phone">휴대전화</label>
+                    <input type="text" placeholder="숫자만 입력해 주세요." name="phone number" phone number="user phone">
+                    <button type="button">
+                        <span>인증번호 받기</span>
+                    </button><br>
+                    <input type="text" placeholder="인증 번호를 입력해 주세요." name="pin" pin="pin number">
+        </div>
+        <div class="title">
+           <label for="user hobby">취미</label><br>
+                <input type="checkbox" name="chk_info" value="운동">운동
+                <input type="checkbox" name="chk_info" value="요리">요리
+                <input type="checkbox" name="chk_info" value="여행">여행
+                <input type="checkbox" name="chk_info" value="게임">게임
+                <input type="checkbox" name="chk_info" value="컴퓨터">컴퓨터
+                <input type="checkbox" name="chk_info" value="음악">음악
+                <input type="checkbox" name="chk_info" value="영화">영화
+                <input type="checkbox" name="chk_info" value="독서">독서
+        </div>
+        <div class="title">
+            <label for="introduce">가입인사</label><br>
+            <textarea id="textarea" name="introduce" value="introduce"></textarea>
+        </div>
+        <button id="button" type="submit" value="information">가입하기</button>
+    </form>
+    </div>
+</body>
+</html>

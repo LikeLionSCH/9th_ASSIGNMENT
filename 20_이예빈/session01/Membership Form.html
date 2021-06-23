@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="Membership Form.css">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <form>
+        <div id="top">
+            회원가입
+        </div>
+        <div id="box">
+            <div class="div">
+                <p class="sub">아이디</p>
+                <input type="text" class="id">
+            </div>
+            <div class="div">
+                <p class="sub">비밀번호</p>
+                <input type="password" class="id">
+            </div>
+            <div class="div">
+                <p class="sub">이름</p>
+                <input type="text" class="id">
+            </div>
+            <div class="div">
+                <p class="sub">생년월일</p>
+                <select name="year" class="birth" placeholder="년도">
+                    <option>년도</option>
+                    <option>2000</option>
+                    <option>2001</option>
+                    <option>2002</option>
+                </select>
+                <select name="year" class="birth" placeholder="월">
+                    <option>월</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+
+                </select>
+                <select name="year" class="birth" placeholder="일">
+                    <option>일</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                </select>
+            </div>
+            <div class="div">
+                <p class="sub">성별</p>
+               <label class="gend"><input type="radio" name="gen"> 남자</label>
+               <label class="gend"><input type="radio" name="gen">여자</label>
+            </div>
+            <div class="div">
+            <input type="text" class="id" placeholder="이메일 주소에 '@'를 포함해주세요."> <br>
+            </div>
+            <div class="div">
+                <p class="sub">휴대전화</p>
+                <input type="text" id="number" placeholder="숫자를 입력해주세요.">
+                <button type="submit" id="verify">인증번호 받기</button>
+                <input type="text" class="id" placeholder="인증번호를 입력해주세요.">
+            </div>
+            <div class="div">
+                <p class="sub">취미</p>
+                <label class="hob"><input type="checkbox" name="hobby">운동</label>
+                <label class="hob"><input type="checkbox" name="hobby">요리</label>
+                <label class="hob"><input type="checkbox" name="hobby">여행</label>
+                <label class="hob"><input type="checkbox" name="hobby">게임</label>
+                <label class="hob"><input type="checkbox" name="hobby">컴퓨터</label>
+                <label class="hob"><input type="checkbox" name="hobby">음악</label>
+                <label class="hob"><input type="checkbox" name="hobby">영화</label>
+                <label class="hob"><input type="checkbox" name="hobby">독서</label>
+            </div>
+            <div class="div">
+                <p class="sub">가입인사</p>
+                <textarea></textarea>
+            </div>
+            <div class="div">
+            <button type="submit" class="submit">가입하기</button>
+            </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="join.css" />
+  </head>
+  <body>
+    <p>회원가입</p>
+    <form action="my-app" method="post">
+      <!-- 아이디 -->
+      <div id="id">
+        <p class="sub_title">아이디</p>
+        <input type="text" name="id" id="userid" />
+      </div>
+
+      <!-- 비밀번호 -->
+      <div id="box">
+        <p class="sub_title">비밀번호</p>
+        <input type="password" name="password" id="userpw" />
+      </div>
+
+      <!-- 이름 -->
+      <div id="box">
+        <p class="sub_title">이름</p>
+        <input type="text" name="name" id="username" />
+      </div>
+
+      <!-- 생년월일 -->
+      <div id="birthday">
+        <p class="sub_title">생년월일</p>
+        <div class="birth_wrap">
+          <span id="birth_box">
+            <select name="useryear" id="year">
+              <option value>년도</option>
+              <option value="01">1997</option>
+              <option value="02">1998</option>
+              <option value="03">1999</option>
+              <option value="04">2000</option>
+              <option value="05">2001</option>
+              <option value="06">2002</option>
+              <option value="07">2003</option>
+            </select>
+          </span>
+          <span id="birth_box">
+            <select name="usermonth" id="month">
+              <option value>월</option>
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </span>
+          <span id="birth_box">
+            <select name="userday" id="day">
+              <option value>일</option>
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <!-- 성별 -->
+      <div id="gender">
+        <p class="sub_title">성별</p>
+        <div id="gender">
+          <input type="radio" name="gender" value="male" />
+          <label>남자</label>
+          <input type="radio" name="gender" value="female" />
+          <label>여자</label>
+        </div>
+      </div>
+
+      <!-- 이메일 -->
+      <div id="email">
+        <p class="sub_title">이메일</p>
+        <input
+          type="email"
+          name="email"
+          id="useremail"
+          placeholder="이메일 주소에 '@'을 포함해주세요."
+        />
+      </div>
+
+      <!-- 휴대전화 -->
+      <div id="phone">
+        <p class="sub_title">휴대전화</p>
+        <div id="phone_number">
+          <span>
+            <input
+              type="tel"
+              id="input_phone"
+              placeholder="숫자를 입력해주세요."
+            />
+          </span>
+          <button id="auth_btn">인증번호 받기</button>
+        </div>
+        <div id="auth_number">
+          <input type="text" id="auth" placeholder="인증번호를 입력해주세요" />
+        </div>
+      </div>
+
+      <!-- 취미 -->
+      <div id="userhobby">
+        <p class="sub_title">취미</p>
+        <div id="checkbox">
+          <input type="checkbox" name="hobby" value="exercise" />
+          <label>운동</label>
+          <input type="checkbox" name="hobby" value="cooking" />
+          <label>요리</label>
+          <input type="checkbox" name="hobby" value="travel" />
+          <label>여행</label>
+          <input type="checkbox" name="hobby" value="game" />
+          <label>게임</label>
+          <input type="checkbox" name="hobby" value="computer" />
+          <label>컴퓨터</label>
+          <input type="checkbox" name="hobby" value="music" />
+          <label>음악</label>
+          <input type="checkbox" name="hobby" value="movie" />
+          <label>영화</label>
+          <input type="checkbox" name="hobby" value="reading" />
+          <label>도서</label>
+        </div>
+      </div>
+
+      <!-- 가입인사 -->
+      <div id="greeting">
+        <p class="sub_title">가입인사</p>
+        <textarea></textarea>
+      </div>
+      <div>
+        <button id="join_btn">가입하기</button>
+      </div>
+    </form>
+  </body>
+</html>

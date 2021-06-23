@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header{
+    font-family: 'TmoneyRoundWindExtraBold';
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: #e8e8e8;
+}
+
+.menu{
+    width: 10%;
+    border: 1px solid black;
+    background-color: #d8fff9;
+    text-align: center;
+    margin: 5px;
+}
+
+.logo{
+    width: 20%;
+    border: 1px solid black;
+    background-color: #f7aaac;
+    text-align: center;
+    margin: 5px;
+}
+
+.search{
+    width: 60%;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    margin: 5px;
+}
+
+.upload{
+    width: 10%;
+    border: 1px solid black;
+    background-color: #d8fff9;
+    text-align: center;
+    margin: 5px;
+}
+
+.app{
+    width: 10%;
+    border: 1px solid black;
+    background-color: #d8fff9;
+    text-align: center;
+    margin: 5px;
+}
+
+.alarm{
+    width: 10%;
+    border: 1px solid black;
+    background-color: #d8fff9;
+    text-align: center;
+    margin: 5px;
+}
+
+.my menu{
+    width: 10%;
+    border: 1px solid black;
+    background-color: #d8fff9;
+    text-align: center;
+    margin: 5px;
+}
+
+
+.container{
+    font-family: 'TmoneyRoundWindExtraBold';
+    display: flex;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.main{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content{
+    width: 23%;
+    height: 50%;
+    margin: 5px;
+}
+
+.video{
+    width: 80%;
+    height: 70%;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-end;
+}
+
+.photo{
+    width: 25%;
+    height: 15%;
+    border: 1px solid black;
+    margin: 1px;
+}
+
+.video_name{
+    width: 75%;
+    height: 15%;
+    border: 1px solid black;
+    margin: 1px;
+}
+
+
+.side_bar{
+    width: 30%;
+    border: 1px solid black;
+}
+
+.home, .view, .subscription, .storage, .record, .my_video, .later, .like{
+    border: 1px solid black;
+    height: 8.5%;
+    margin: 1px;
+    background-color: #e0fae4;
+    text-align: center;
+}
+
+.subscriber{
+    border: 1px solid black;
+    height: 8.1%;
+    margin: 1px;
+    background-color: #faf8e0;
+    text-align: center;
+}

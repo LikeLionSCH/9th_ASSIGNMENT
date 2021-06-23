@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoinPage</title>
+    <link rel="stylesheet" href="join.css">
+<body>  
+    <header>
+        <p class="title" id="joinpage">회원가입</p>
+    </header>
+
+    <div id = "box">
+        <form method="post">
+                <p class="title">아이디</p>
+                    <input type="text" name="id" id="userid" class="content"> 
+                    <p class="title">비밀번호</p>
+                    <input type="password" name="password" id="userpw" class="content"> 
+                    <p class="title">이름</p>
+                    <input type="text" name="name" id="username" class="content"> 
+                    <p class="title">생년월일</p>
+                    <select name="birth" id="birth">
+                        <option value=""disabled selected hidden>년도</option> 
+                        <option>1998</option>
+                        <option>1999</option>
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                    </select>
+    
+                    <select name="birth" id="birth">
+                        <option value=""disabled selected hidden>월</option> 
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+    
+                    <select name="birth" id="birth">
+                        <option value=""disabled selected hidden>일</option> 
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                    </select>
+            
+                <p class="title">성별</p>
+                <p class="left">
+                <input type="radio" name="gender" value="male" class="sex" /> 
+                <span class="gender">남자</span>
+                <input type="radio" name="gender" value="female" class="sex"/>
+                <span class="gender">여자</span>
+                </p>
+                
+                <p class="title">이메일</p>
+                <input type="text" name="email" id="email" class="content" placeholder="이메일 주소에 '@'를 포함해주세요."> 
+            
+                <p class="title">휴대전화</p>
+                <input type="text" name="phonenumber" id="usernum" class="content" placeholder="숫자만 입력해주세요."> 
+                <button id="num">인증번호 받기</button> 
+                <input type="text" name="number" id="usernumber" placeholder="인증번호를 입력해주세요."> 
+            
+                <p class="title">취미</p>
+                <p class="left">
+                <input type="checkbox" name="hobby" value="exercise" class="checkbox"/>
+                <span class="hobby">운동</span>
+                <input type="checkbox" name="hobby" value="cooking" class="checkbox"/>
+                <span class="hobby">요리</span>
+                <input type="checkbox" name="hobby" value="trip" class="checkbox"/>
+                <span class="hobby">여행</span>
+                <input type="checkbox" name="hobby" value="game" class="checkbox"/>
+                <span class="hobby">게임</span>
+                <input type="checkbox" name="hobby" value="computer" class="checkbox"/>
+                <span class="hobby">컴퓨터</span>
+                <input type="checkbox" name="hobby" value="music" class="checkbox"/>
+                <span class="hobby">음악</span>
+                <input type="checkbox" name="hobby" value="movie" class="checkbox"/>
+                <span class="hobby">영화</span>
+                <input type="checkbox" name="hobby" value="reading" class="checkbox"/>
+                <span class="hobby">독서</span>
+            </p>
+
+                <p class="title">가입인사</p>
+                <input type="text" name="greeting" id="greeting" class="content"> <br>
+                <button type="submit" id="join">가입하기</button> 
+        </form>
+    </div>
+    
+</head>
+<body>
+</html>

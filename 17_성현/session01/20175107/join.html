@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="join.css">
+</head>
+<body>
+    <div id="maindiv">
+        <form>
+            <p class="section">회원가입</p>
+            <div class="inform">
+                <p class="section">아이디</p>
+                <div>
+                    <input type="text" class="inputfont fullsize">
+                </div>
+                <p class="section">비밀번호</p>
+                <div>
+                    <input type="password" class="inputfont fullsize">
+                </div>
+                <p class="section">이름</p>
+                <div>
+                    <input type="text" class="inputfont fullsize">
+                </div>
+                <p class="section">생년월일</p>
+                <div>
+                    <select class="birth">
+                        <option>년</option>
+                        <option>1997</option>
+                        <option>1998</option>
+                        <option>1999</option>
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                        <option>2003</option>
+                    </select>
+                    <select class="birth">
+                        <option>월</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <select class="birth">
+                        <option>일</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                </div>
+                <p class="section">성별</p>
+                <div>
+                    <input type="radio" id="man" name="sex" value="m" class="radio">
+                    <label for="man" class="intputradio">남자</label>
+                    <input type="radio" id="woman" name="sex" value="w" class="radio">
+                    <label for="woman" class="inputradio">여자</label>
+                </div>
+                <p class="section">이메일</p>
+                <div>
+                    <input type="email" name="userEmail" class="inputfont fullsize" placeholder="이메일 주소에 '@'를 포함해주세요.">
+                </div>
+                <p class="section">휴대전화</p>
+                <div>
+                    <input type="tel" id="phone" pattern="[0-9]{11}" class="inputfont" placeholder="숫자만 입력해주세요.">
+                    <div id="button">인증번호 받기</div>
+                    <input type="number" pattern="\d*" class="inputfont fullsize" placeholder="인증번호를 입력해주세요.">
+                </div>
+                <p class="section">취미</p>
+                <div>
+                    <input id="exercise" type="checkbox">
+                    <label for="exercise" class="label">운동</label>
+                    <input id="cook" type="checkbox">
+                    <label for="cook" class="label">요리</label>
+                    <input id="travel" type="checkbox">
+                    <label for="travel" class="label">여행</label>
+                    <input id="game" type="checkbox">
+                    <label for="game" class="label">게임</label>
+                    <input id="computer" type="checkbox">
+                    <label for="computer" class="label">컴퓨터</label>
+                    <input id="music" type="checkbox">
+                    <label for="music" class="label">음악</label>
+                    <input id="movie" type="checkbox">
+                    <label for="movie" class="label">영화</label>
+                    <input id="book" type="checkbox">
+                    <label for="book" class="label">독서</label>
+                </div>
+                <p class="section">가입인사</p>
+                <div>
+                    <textarea  class="inputfont textarea"></textarea>
+                </div>
+                <div id="submit" class="fullsize">가입하기</div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

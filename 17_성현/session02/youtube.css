@@ -1,0 +1,109 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;  margin: 0px; 
+    width: 1890px; height: 1000px;
+}
+#header {
+    display: flex; align-items: center;
+    width: 100%; height: 60px; 
+} 
+#sidebar {
+    width: 250px; height: 100%; 
+}
+#listimg {
+    margin-left: 25px;
+}
+#logoimg {
+    margin: 0 5px 0 25px;
+}
+#searchbox {
+    width: 1000px; height: 40px; margin-left: 500px;
+}
+#search {
+    display: flex; 
+    border: 1px solid black; width: 500px; height: 37px;
+    justify-content: space-between;
+}
+#text {
+    border: none; line-height: 30px; margin-left: 10px; width: 500px;
+}
+#keyboard {
+    margin-right: 10px; display: inline;
+}
+#searchbtnblock{
+    background-color: rgb(204, 204, 204); width: 60px; height: 35px;
+    border: 1px solid rgb(179, 179, 179);
+    display: flex; justify-content: center; align-items: center;
+}
+#add {
+    margin :0 40px 0 10px
+}
+#loginbtn {
+    -webkit-filter: opacity(.5) drop-shadow(0 0 0 blue);
+    filter: opacity(.5) drop-shadow(0 0 0 blue);
+}
+#sidebarlogin {
+    margin: 10px 0 0 20px;
+    width: 220px; height: 150px;
+}
+#logintext {
+    margin: 5px 5px;
+}
+#main {
+    display: flex; justify-content: center; align-items: center;
+    flex-wrap: wrap; width: 1630px; height: 100%; margin: 0px;
+}
+
+.login {
+    color: blue; font-size: large; margin-left: 5px;
+}
+.align-center {
+    align-items: center;
+}
+.idbox {
+    border: 1px solid blue; width: 100px; height: 40px;
+    display: flex; justify-content: center; align-items: center;
+}
+.sidebarmenu {
+    height: 40px; width: 220px;
+    display: flex; align-items: center;
+    margin: 2px 0;
+}
+.sidebarmenutopimg {
+    margin: 0 25px;
+}
+.sidebarmenuimg {
+    margin: 0 25px;
+    border-radius: 70px;
+    -moz-border-radius: 70px;
+    -khtml-border-radius: 70px;
+    -webkit-border-radius: 70px;
+}
+.sidebarmenutag {
+    margin-left: 10px; font-size: 14px;
+}
+.sidebartitle {
+    font-size: 16px; color: gray; margin-left: 22px; font-weight: bold;
+}
+.mainblock {
+    padding: 0 0 0 20px;
+    margin: 0;
+    width: 380px; height: 320px;
+}
+.p {
+    display: inline-block; text-align: left;
+}
+.blockinblock {
+    width: 350px; height: 50px;
+    align-items: center; display: flex;
+}
+.channelimg {
+    margin: 0 10px 0 10px;
+}
+.videochannel {
+    color: gray; margin: 0 0 0 50px;
+}
+
+.sidebarmenu:hover {
+    background-color: rgb(202, 200, 200);
+}

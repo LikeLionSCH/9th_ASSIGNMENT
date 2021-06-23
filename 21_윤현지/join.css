@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title {
+    font-family: 'Cafe24Oneprettynight';
+}
+
+label {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form {
+    border: 1px solid #e4e4e4;
+    background-color: #fbfbfb;
+    width: 825px;
+    height: 800px;
+    padding: 10px 15px;
+    margin: 5px;
+}
+
+input {
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.info {
+    width: 800px;
+    height: 20px;
+    margin: 5px 0px;
+}
+
+.input {
+    width: 265px;
+    height: 25px;
+    margin: 5px 0px;
+}
+
+#textarea {
+    width: 800px;
+    height: 200px;
+    margin: 5px 0px;
+}
+
+#checkbox {
+    color:#000; 
+    font-weight:bold; 
+    font-size: 12px;
+}
+
+#button {
+    background-color:#4ec53d;
+    color:#fff;  
+    font-size: 16px;
+    font-family: 'CookieRunOTF-Bold';
+    border: 1px solid;
+    width: 810px;
+    height: 50px;
+    margin: 5px 0px;
+}
+
+.container {
+    margin-left: 30%;
+} 

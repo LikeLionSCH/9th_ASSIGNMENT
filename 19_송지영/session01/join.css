@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+form{
+    border: 1px solid #efefef;
+    background-color: #fbfbfb;
+    width: 1000px;
+}
+
+.join_form{
+    margin-left: 20px;
+}
+
+.title{
+    font-size: 14px;
+    color:#000;
+    font-weight: bold;
+}
+
+input{
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size: 12px;
+    color:#000;
+}
+
+select{
+    font-family: 'NEXON Lv1 Gothic OTF';
+    font-size:12px;
+    color:#000;
+}
+
+.gender .hobby{
+    font-size: 12px;
+}
+
+#code{
+    font-family: 'NEXON Lv1 Gothic OTF';
+}
+
+.user_birth{
+    width: 315px;
+    height: 30px;
+}
+
+#user_id, #user_pw, #user_name, #user_email, #user_code{
+    width: 950px;
+    height: 25px;
+}
+
+#user_tel{
+    width: 800px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+#code_btn{
+    width: 150px;
+    height: 30px;
+    border: 1px solid #08a600;
+    background-color: #4ec53d;
+    font-family:'NEXON Lv1 Gothic OTF';
+    font-size: 12px;
+    color:#fff;
+}
+
+#user_introduce{
+    width: 950px;
+    height: 100px;
+}
+
+#join_btn{
+    margin:20px 0px 20px 0px;
+    width: 950px;
+    height: 40px;
+    border: 1px solid #08a600;
+    background-color: #4ec53d;
+    font-family:'NEXON Lv1 Gothic OTF';
+    font-size: 16px;
+    color:#fff;
+    
+}
+
+label {
+    margin-right: 70px;
+}

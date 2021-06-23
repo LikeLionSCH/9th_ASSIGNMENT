@@ -1,0 +1,99 @@
+@import "reset.css";
+
+.header {
+    height: 50px;
+    width: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: 10px; */
+    /* 마진으로 너비설정*/
+  }
+
+  .header img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header input {
+    width: 500px;
+    height: 30px;
+  }
+
+  .header button {
+    width: 60px;
+    height: 30px;
+  }
+
+  #logo{
+    width: 120px;
+    height: 30px;
+  }
+
+  .container {
+    display: flex;
+    height: 1000px;
+    border: 1px solid black;
+  }
+  
+  .side {
+    width: 20%;
+    border: 1px solid black;
+    display: flex;
+    padding-top: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-content: space-between; */
+    /* align-items: center; */
+  }
+
+  .ulspan{
+    display: flex;
+    height: 30px;
+  }
+
+
+  .side ul li {
+    display: flex;
+    width: 300px;
+    height: 40px;
+  }
+
+  .side ul li a{
+    text-decoration: none;
+    color: rgb(78, 78, 78);
+  }
+
+  .side ul li span {
+    padding: 10px;
+  }
+  .ulspan {
+    color: rgb(78,78,78);
+  }
+  
+  .sidemenu{
+    margin: 3px;
+  }
+
+  
+  .main {
+    width: 80%;
+    border: 1px solid black;
+    padding-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    /* justify-content: center;
+    flex-direction: column; */
+  }
+  
+  .main div {
+    width: 300px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 5px;
+    border: 1px solid black;
+    
+  }

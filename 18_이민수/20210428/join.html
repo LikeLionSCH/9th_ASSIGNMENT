@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="join.css">
+</head>
+<body>
+    <div class="container">
+    <div class="title" id="sign">회원가입</div>
+    <form>
+        <div>
+            <label class="title">아이디<br>
+                <input class="info" type="text" name= "id">
+            </label>
+        </div>
+        <div>
+            <label class="title">비밀번호<br>
+                <input class="info" type="password" name= "pw">
+            </label>
+        </div>
+        <div>
+            <label class="title">이름<br>
+                <input class="info" type="text" name= "name">
+            </label>
+        </div>
+        <div>
+            <label class="title">생년월일<br>
+            <select class="input" name= "year"> 
+                <option value="" hidden>년도</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+            </select>
+            <select class="input" name="month">
+                <option value="" hidden>월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select class="input" name="day">
+                <option value="" hidden>일</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+            </select>
+            </label>
+        </div>
+        <div>
+            <label class="title">성별<br></label>
+            <label>
+                <input class="sex" type="radio" name="sex" value="man" checked="">남자
+            </label>
+            <label>
+                <input class="sex" type="radio" name="sex" value="woman">여자
+            </label>
+        </div>
+        <div>
+            <label class="title">이메일<br>
+                <input class="info" type="text" name="mail" placeholder="이메일 주소에 '@'를 포함해주세요.">
+            </label>
+        </div>
+        <div>
+            <label class="title">휴대전화<br>
+            <input id="hp" type="text" name="hp" placeholder="숫자만 입력해주세요.">
+            <input id="certification" type="button" value="인증번호 받기"><br>
+            <input class="info" type="text" name="certification" placeholder="인증번호를 입력해주세요.">
+            </label>
+        </div>
+        <div>
+            <label class="title">취미</label><br>
+            <label id="checkbox">
+                <input type="checkbox"  name="hobby" value="exercise">운동
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="cook">요리    
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="trip">여행
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="game">게임
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="computer">컴퓨터
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="music">음악
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="movie">영화
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" value="reading">독서
+            </label>
+        </div>
+        <div>
+            <label class="title">가입인사<br>
+            <textarea id="textarea" name="introduce" value="introduce"></textarea>
+            </label>
+        </div>
+        <button id="button" type="submit" value="personal_information">가입하기</button>   
+    </form>
+    </div>
+</body>
+</html>

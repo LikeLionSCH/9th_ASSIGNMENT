@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'ELAND_Choice_M';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Choice_M.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'ELAND_Choice_M';
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    border: 1px solid #e4e4e4;
+    background-color: #fbfbfb;
+}
+#container{
+    margin: 20px;
+}
+.subtitle{
+    font-family: 'ELAND_Choice_M';
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 5px;
+}
+
+
+.textinput{
+    width: 956px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'ELAND_Choice_M';
+    font-size: 12px;
+    color: #000;
+}
+
+
+#numberinput{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.phonenumberinput {
+    width: 79.5%;
+    height: 30px;
+    padding: 0px;
+    font-family: 'ELAND_Choice_M';
+    font-size: 12px;    
+}
+.codenumberbutton{
+    width: 19.5%;
+    border: 1px #08a600;
+    background-color: #4ec53d;
+    font-family: 'ELAND_Choice_M';
+    font-size: 12px;
+    color: #fff;
+}
+
+.selectlabel{
+  display: flex;
+}
+label{
+    margin-right: 70px;
+    font-family: 'ELAND_Choice_M';
+    font-size: 12px;
+    color: #000;
+    padding: 0px;
+}
+label input{
+    margin-bottom: 0px;
+}
+
+#birthdayselect {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'ELAND_Choice_M';
+    font-size: 12px;
+    color: #000;
+}
+select{
+    width: 33%;
+    height: 30px;
+}
+
+textarea{
+    width: 958px;
+    padding: 0px;
+    margin-bottom: 10px;
+}
+.joinbutton{
+    width: 100%;
+    height: 35px;
+    padding: 0px;
+    border: 1px #08a600;
+    background-color: #4ec53d;
+    font-family: 'ELAND_Choice_M';
+    font-size: 16px;
+    color: #fff;
+}
+
+.test {
+    font-size: 14px;
+}

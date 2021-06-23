@@ -1,0 +1,68 @@
+@import "reset.css";
+
+.header {
+    display: flex;
+   justify-content: space-between;
+}
+
+#search{
+  height: 25px;
+  width: 500px;  
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+}
+.sidebar{
+    padding-top: 8px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    height: 100%;
+}
+.sidebar a{
+    text-decoration: none; color:black;
+}
+.sidebar ul{
+  padding: 0;
+}
+
+.sidebar li{
+    display: flex;
+    padding-left: 0px;
+    justify-content: space-between; 
+}
+
+.container{
+  padding-top: 20px;
+  height: 100%;
+  width: 1230px;
+  display: flex;
+  flex-flow: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  background-color: rgb(249,249,249);
+}
+
+.content {
+  height: 28%;
+  width: 250px;
+}
+.title{
+  display: flex;
+  flex-direction: row;
+}
+.content p{
+  font-size:13px;
+  margin: 1px;
+}
+.content span{
+
+  margin: 45px;
+  font-size:12px;
+
+}

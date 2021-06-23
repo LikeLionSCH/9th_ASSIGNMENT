@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="join.css">
+</head>
+<body>
+    <p class="subtitle">회원가입</p>
+    <form action="">
+        <div id="container">
+            <div id="id">
+                <p class="subtitle">아이디</p>
+                <input type="text" class="textinput">
+            </div>
+            <div id="password">
+                <p class="subtitle">비밀번호</p>
+                <input type="password" class="textinput">
+            </div>
+            <div id="name">
+                <p class="subtitle">이름</p>
+                <input type="text" class="textinput">
+            </div>
+            <div id="birthday">
+                <p class="subtitle">생년월일</p>
+                <div id="birthdayselect">
+                    <select name="year">
+                        <option value="">년도</option>
+                        <option value="1998년">1998년</option>
+                        <option value="1999년">1999년</option>
+                        <option value="2000년">2000년</option>
+                        <option value="2001년">2001년</option>
+                        <option value="2002년">2002년</option>
+                    </select>
+                    <select name="month">
+                        <option value="">월</option>
+                        <option value="1월">1월</option>
+                        <option value="2월">2월</option>
+                        <option value="3월">3월</option>
+                        <option value="4월">4월</option>
+                        <option value="5월">5월</option>
+                        <option value="6월">6월</option>
+                        <option value="7월">7월</option>
+                        <option value="8월">8월</option>
+                        <option value="9월">9월</option>
+                        <option value="10월">10월</option>
+                        <option value="11월">11월</option>
+                        <option value="12월">12월</option>
+                    </select>
+                    <select name="day">
+                        <option value="">일</option>
+                        <option value="1일">1일</option>
+                        <option value="2일">2일</option>
+                        <option value="3일">3일</option>
+                        <option value="4일">4일</option>
+                        <option value="5일">5일</option>
+                        <option value="6일">6일</option>
+                        <option value="7일">7일</option>
+                        <option value="8일">8일</option>
+                        <option value="9일">9일</option>
+                        <option value="10일">10일</option>
+                        <option value="25일">25일</option>
+                    </select>
+                    </div>
+            </div>
+            <div id="gender">
+                <p class="subtitle">성별</p>
+                    <input type="radio" name="gender">남자
+                    <input type="radio" name="gender">여자
+            </div>
+            <div id="email">
+                <p class="subtitle">이메일</p>
+                <input type="email" class="textinput"  placeholder=" 이메일 주소에 '@'를 포함해주세요.">
+            </div>
+            <div id="phonenumber">
+                <p class="subtitle">휴대전화</p>
+                <div id="numberinput">
+                    <input type="text" class="phonenumberinput" placeholder=" 숫자만 입력해주세요.">
+                    <button type="submit" class="codenumberbutton" onclick="alert('인증번호가 전송되었습니다.')">인증번호 받기</button>
+                </div>
+                <input type="text" class="textinput" placeholder=" 인증번호를 입력해주세요.">
+            </div>
+            <div id="hobby">
+                <p class="subtitle">취미</p>
+                <div class="selectlabel">
+                    
+                    <input type="checkbox" name="hobby"><span class="test">요리</span>
+                    <input type="checkbox" name="hobby"><span class="test">요리</span>
+                    <input type="checkbox" name="hobby"><span class="test">요리</span>
+                    <input type="checkbox" name="hobby"><span class="test">요리</span>
+                    <input type="checkbox" name="hobby"><span class="test">요리</span>
+                    <input type="checkbox" name="hobby"><span class="test">요리</span>
+                    <input type="checkbox" name="hobby"><span class="test">요리</span>
+                    <!-- <input type="checkbox" name="hobby">여행
+                    <input type="checkbox" name="hobby">게임
+                    <input type="checkbox" name="hobby">컴퓨터
+                    <input type="checkbox" name="hobby">음악
+                    <input type="checkbox" name="hobby">영화
+                    <input type="checkbox" name="hobby">독서 -->
+                </div>
+            </div>
+            <div id="greet">
+                <p class="subtitle">가입인사</p>
+                <textarea name="greet" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div>
+                <button class="joinbutton" onclick="alert('가입이 완료되었습니다.')">가입하기</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

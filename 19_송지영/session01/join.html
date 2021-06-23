@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="join.css">
+</head>
+<body>
+    <p>회원가입</p>
+    <div action="my-app" method="POST">
+        <form>
+        <div class="join_form">
+        <div class="id">
+            <p class="title">아이디 </p>
+            <input type="text" name="id" id="user_id"> 
+        </div>
+        <div class="pw">
+            <p class="title">비밀번호</p>
+            <input type="text" name="pw" id ="user_pw">
+        </div>
+        <div class="name">
+            <p id="title">이름</p>
+            <input type="text" name="name" id="user_name">
+        </div>
+        <div class="birth">
+            <p class="title">생년월일</p>
+            <span>
+                    <select name="user_year" class="user_birth">
+                        <option value="" disabled selected>년도</option>
+                        <option value="1996">1996</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                    </select>
+                    <select name="user_month" class="user_birth">
+                        <option value="" disabled selected>월</option>
+                        <option value="1">1월</option>
+                        <option value="2">2월</option>
+                        <option value="3">3월</option>
+                        <option value="4">4월</option>
+                        <option value="5">5월</option>
+                        <option value="6">6월</option>
+                        <option value="7">7월</option>
+                        <option value="8">8월</option>
+                        <option value="9">9월</option>
+                        <option value="10">10월</option>
+                        <option value="11">11월</option>
+                        <option value="12">12월</option>
+                    </select>
+                    <select name="user_date" class="user_birth">
+                        <option value="" disabled selected>일</option>
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                        <option value="3">3일</option>
+                        <option value="4">4일</option> 
+                        <option value="5">5일</option>
+                        <option value="6">6일</option>
+                        <option value="7">7일</option>
+                        <option value="8">8일</option>
+                        <option value="9">9일</option>
+                        <option value="10">10일</option>
+                        <option value="11">11일</option>
+                        <option value="12">12일</option>
+                        <option value="13">13일</option>
+                        <option value="14">14일</option>
+                        <option value="15">15일</option>
+                        <option value="16">16일</option>
+                        <option value="17">17일</option>
+                        <option value="18">18일</option>
+                        <option value="19">19일</option>
+                        <option value="20">20일</option>
+                        <option value="21">21일</option>
+                        <option value="22">22일</option>
+                        <option value="23">23일</option>
+                        <option value="24">24일</option>
+                        <option value="25">25일</option>
+                        <option value="26">26일</option>
+                        <option value="27">27일</option>
+                        <option value="28">28일</option>
+                        <option value="29">29일</option>
+                        <option value="30">30일</option>
+                        <option value="31">31일</option>
+                    </select>
+                </span>
+                </div>
+                <div class="gender">
+                    <p class="title">성별</p>
+                    <input type="radio" id="user_gender" value="male"><label>남자</label>
+                    <input type="radio" id="user_gender" value="female"><label>여자</label>
+                </div>
+                <div class="email">
+                    <p class="title">이메일</p>
+                    <input type="email" name="email" id="user_email" placeholder="이메일 주소에 '@'를 포함해주세요.">
+                </div>
+                <div class="phone">
+                    <p class="title">휴대전화</p>
+                    <input type="tel" name="phone" id="user_tel" placeholder="숫자만 입력해주세요.">
+                    <button type="button" id="code_btn">인증번호 받기</button> <br>
+                    <input type="number" name="phone_code" id="user_code" placeholder="인증번호를 입력해주세요">
+                </div>
+                <div class="hobby">
+                    <p class="title">취미</p>
+                    <input type="checkbox" id="exercise"><label>운동</label>
+                    <input type="checkbox" id="cook"><label>요리</label>
+                    <input type="checkbox" id="trip"><label>여행</label>
+                    <input type="checkbox" id="game"><label>게임</label>
+                    <input type="checkbox" id="computer"><label>컴퓨터</label>
+                    <input type="checkbox" id="reading"><label>독서</label>
+                    <input type="checkbox" id="music"><label>음악</label>
+                    <input type="checkbox" id="movie"><label>영화</label>
+                </div>
+                <div class="intro">
+                    <p class="title">가입인사</p>
+                    <input type="text" name="introduce" id="user_introduce">
+                </div>
+                <div class="join">
+                    <button type="submit" id="join_btn">가입하기</button>
+                </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

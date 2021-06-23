@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="join.css">
+        <title>회원가입 폼</title>
+    </head>
+    <body>
+
+        <p id="join">회원가입</p>
+        <div id = "inner">
+        <form action="전송받을 대상">
+            <p class="main">아이디</p>
+            <input class="input" type="text" name="myid"><br>
+            <p class="main">비밀번호</p>
+            <input class="input" type="password" name="mypw"><br>
+            <p class="main">이름</p>
+            <input class="input" type="text" name="name"><br>
+            <p class="main">생년월일</p>
+            <select class="year">
+                <option value="년도">년도</option>
+                <option value="1990">1990</option>
+                <option value="1991">1991</option>
+                <option value="1992">1992</option>
+            </select>
+            <select class="year">
+                <option value="월">월</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <select class="year">
+                <option value="일">일</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select><br>
+            <p class="main">성별</p>
+            <p class="left">
+                <input name="gender" type="radio">
+                    <span class="gender">남자</span>
+                <input name="gender" type="radio">
+                    <span class="gender">여자</span>
+            </p>
+            <p class="main">이메일</p>
+            <input type="email" class="emailnum" placeholder="이메일 주소에 '@'를 포함해주세요"><br>
+            <p class="main">휴대전화</p>
+            <input type="text" id ="phone" placeholder="숫자만 입력해주세요.">
+            <button id="phonebutton" type="button">인증번호 받기</button><br>
+            <input type="text" class="emailnum" placeholder="인증번호를 입력해주세요."><br>
+            <p class="main">취미</p>
+            <p class="left">
+                <input  type="checkbox">
+                    <span class="hobby">운동</span>
+                <input type="checkbox">
+                    <span class="hobby">요리</span>
+                <input type="checkbox"> 
+                    <span class="hobby">여행</span>
+                <input type="checkbox"> 
+                    <span class="hobby">게임</span>
+                <input type="checkbox"> 
+                    <span class="hobby">컴퓨터</span>
+                <input type="checkbox"> 
+                    <span class="hobby">음악</span>
+                <input type="checkbox"> 
+                    <span class="hobby">영화</span>
+                <input type="checkbox"> 
+                    <span class="hobby">독서</span>
+            </p>
+            <p class="main">가입인사</p>
+            <textarea cols="124" rows="15"></textarea><br>
+            <button id="summit" type="submit">가입하기</button>            
+        </form>
+        </div>
+    </body>
+</html>

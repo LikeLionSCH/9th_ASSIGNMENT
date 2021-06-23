@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="join.css">
+</head>
+<body>
+    <p>회원가입</p>
+    <form action="my-app" method="get">
+        <div class="content">
+                <label for="userid">아이디</label><br>
+                <input type="text" name="id" id="id" class="info">
+        </div>
+        <div class="content">
+                <label for="userpw">비밀번호</label><br>
+                <input type="password" name="password" id="pw" class="info">
+        </div>
+        <div class="content">
+                <label for="username">이름</label><br>
+                <input type="text" name="name" id="name" class="info">
+        </div>
+        <div class="content">
+                <label for="birthday">생년월일</label><br>
+                <div class="date">       
+                    <select name="year" id="year">
+                        <option value="" selected="selected">년도</option>
+                        <option value="2002">2002</option>
+                        <option value="2001">2001</option>
+                        <option value="2000">2000</option>
+                    </select>
+                    <select name="month" id="month">
+                        <option value="" selected="selected">월</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <select name="day" id="day">
+                        <option value="" selected="selected">일</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                </select>
+        </div>
+        <div class="content">
+                <label for="sex">성별</label><br>
+                <div class="sex">
+                    <input type="radio" name="sex" value="남자" class="sex2">남자
+                    <input type="radio" name="sex" value="여자" class="sex1">여자
+                </div>
+        </div>
+        <div class="content">
+                <label for="user email">이메일</label><br>
+                <input type="email" placeholder="이메일 주소에'@'를 포함해 주세요." name="mail" id="email" class="info">
+        </div>
+        <div class="content">
+                <label for="user phone">휴대전화</label><br>
+                <div class="line">
+                    <input type="text" placeholder="숫자만 입력해 주세요." name="phone number" id="phone number">
+                    <button id="certificate">인증번호 받기</button>
+                </div>
+                <input type="text" placeholder="인증 번호를 입력해 주세요." name="certificate" id="number" class="info">
+        </div>
+        <div class="content">
+           <label for="user hobby">취미</label><br>
+           <div class="hobby">
+                <input type="checkbox" class="check1"name="work" value="운동">운동
+                <input type="checkbox" class="check" name="cook" value="요리">요리
+                <input type="checkbox" class="check" name="travel" value="여행">여행
+                <input type="checkbox" class="check" name="game" value="게임">게임
+                <input type="checkbox" class="check" name="computer" value="컴퓨터">컴퓨터
+                <input type="checkbox" class="check" name="music" value="음악">음악
+                <input type="checkbox" class="check" name="movie" value="영화">영화
+                <input type="checkbox" class="check" name="book" value="독서">독서
+            </div>
+        </div>
+        <div class="content">
+            <label for="introduce">가입인사</label><br>
+            <textarea id="introduce" name="introduce" value="introduce" width="100%" rows="10"></textarea>
+        </div>
+        <div class="content">
+            <button id="join" type="submit">가입하기</button>
+        </div>
+    </form>
+</body>
+</html>

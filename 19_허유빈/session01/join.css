@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'SLEIGothicTTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SLEIGothicTTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sub_title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    width: 1000px;
+    margin: 10px auto;
+    }
+
+.box {
+    border: 1px solid #e4e4e4;background-color: #fbfbfb;
+    width: 1000px;
+    padding: 10px 30px;
+}
+
+.input_style {
+    font-size: 12px;
+    color: #000;
+    width: 1000px;
+}
+
+#join_title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.data {
+    margin-bottom: 10px;
+}
+
+.choice {
+    font-size: 12px;
+    color: #000;
+}
+
+#certification_button {
+    background-color: #4ec53d;
+    font-size: 12px;
+    color: #fbfbfb;
+    border: 1px solid #08a600;
+    padding: 0 auto;
+    width: 186px;
+}
+
+#userphone {
+    width: 800px;
+}
+
+textarea {
+    width: 1000px;
+    height: 100px;
+}
+
+#join_button {
+    background-color: #4ec53d;
+    font-size: 16px;
+    color: #fbfbfb;
+    border: 1px solid #08a600;
+    width: 1000px;
+}
+
+.gap {
+    margin: 43px;
+}
+
+#year {
+    width: 320px;
+}
+#month {
+    width: 320px;
+}
+#day {
+    width: 320px;
+}
+
+.container {
+    margin-left: 100px;
+}
