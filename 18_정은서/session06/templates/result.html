@@ -1,0 +1,11 @@
+<body>
+    전체 글자 수 - {{total_len}}
+    <br>
+    공백 제외 글자 수 - {{nospace}}
+    <p>----단어 리스트----</p>
+    {%for i in word_list%}
+        {{i}}
+        <br>
+    {%endfor%}
+
+</body>
