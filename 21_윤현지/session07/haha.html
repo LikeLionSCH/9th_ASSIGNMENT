@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 엔시티 드림 {% endblock %}
+{% block link %} {% static 'css/haha.css' %} {% endblock %}
+{% block content %}
+
+    <h1>엔시티 드림을 소개합니다~!</h1>
+
+        {% for a in ncts %}
+        <div>
+            <h2>{{a.title}}</h2>
+            <h4>{{a.pub_date}}</h4>
+            <h4>{{a.author}}</h4>
+            <p class="bodystyle">{{a.body}}</p>
+            <p><img src="{{ a.image.url }}" width="1100" height="800" alt="안 나와요" /></p>
+        </div>
+    {% endfor %}
+{% endblock %}
