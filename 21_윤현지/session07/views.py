@@ -9,3 +9,4 @@ def home (request) :
 def haha (request) :
     ncts = NCT.objects.all()
     return render (request, 'haha.html', {'ncts': ncts})
+    
