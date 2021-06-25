@@ -7,3 +7,4 @@ admin.site.register(Blog)
 admin.site.register(NCT)
 
 # Register your models here.
+
