@@ -23,4 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', b.home, name='home'),
     path('cat', b.cat, name='cat'),
+    path('<str:id>', b.detail, name='detail'),
+    path('new/', b.new, name='new'),
+    path('create/', b.create, name='create'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
