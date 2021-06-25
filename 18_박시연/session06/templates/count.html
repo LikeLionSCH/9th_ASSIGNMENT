@@ -1,0 +1,13 @@
+<body>
+    <h1>여기에 글자 입력</h1>
+    <form action="{% url 'result' %}" method="POST">
+        {%csrf_token%}
+        <textarea name="text" cols="60" rows="10"></textarea>
+        <br>
+        <input type="submit" value="제출하기">
+    </form>
+    
+    <a href="{% url 'test' %}">test</a>
+    <a href="{% url 'test1' %}">test1</a>
+    <a href="{% url 'test2' %}">test2</a>
+</body>
