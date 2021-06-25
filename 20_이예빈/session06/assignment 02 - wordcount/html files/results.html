@@ -1,0 +1,10 @@
+<body>
+    <div style="text-align:center">
+        전체 글자 수 - {{total_len}} <br>
+        공백 제외 글자 수 - {{letterCount}} <br>
+        ---- 단어 리스트 ---- <br>
+        {% for word in text %}
+            {{word}} <br>
+        {% endfor %}
+    </div>
+</body>
