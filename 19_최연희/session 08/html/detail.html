@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{%load static%}
+{%block title%} 디테일페이지 {%endblock%}
+{%block content%}
+
+    <h1>글 제목 : {{diary.title}}</h1>
+    <h3>작성자 : {{diary.author}}</h3>
+    <h5>게시일 : {{diary.pub_date}}</h5>
+    <hr>
+    <p><img src="{{diary.image.url}}" width="200" height="200"></p>
+    {{ diary.body }}
+    {{ diary.todolist}}
+    <br>
+    <a href="{% url 'edit' diary.id %}"><input type="button" value="내용 수정하기"></a>
+    <a href="{% url 'delete' diary.id %}"><input type="button" value="내용 삭제하기"></a>
+{%endblock%}
