@@ -1,0 +1,123 @@
+<!-- 카테고리: (최신 시사, 정치•행정, 경제•산업, 사회•환경, 국제•외교, 북한•안보, 문화•미디어, 과학•IT, 스포츠•엔터, 인물•용어)
+      문제: (기여 점수/예상 레벨)가 나오고 풀면 정답여부없이 정답해설
+  #F0CBB0
+	#8C6751
+	#AF8C72
+
+ -->
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/quiz_non1.css' %}">
+    <title>ACROPOLIS</title>
+</head>
+<body>
+    <div class="b-example-divider"></div>
+      <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+            </a>
+            
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="#" class="nav-link px-2 link-dark">교육</a></li>
+              <li><a href="#" class="nav-link px-2 link-dark">퀴즈</a></li>
+              <li><a href="#" class="nav-link px-2 link-dark">커뮤니티</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+            </form>
+
+            <div class="dropdown text-end">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+              <li><a class="dropdown-item" href="#">New project...</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="flexMain">
+      <nav>
+        <div class="categoryChooseBox">
+          <div class="categoryChoose">최신 시사</div>
+          <div class="categoryChoose">정치•행정</div>
+          <div class="categoryChoose">경제•산업</div>
+          <div class="categoryChoose">사회•환경</div>
+          <div class="categoryChoose">국제•외교</div>
+          <div class="categoryChoose">북한•안보</div>
+          <div class="categoryChoose">문화•미디어</div>
+          <div class="categoryChoose">과학•IT</div>
+          <div class="categoryChoose">스포츠•엔터</div>
+          <div class="categoryChoose">인물•용어</div>
+        </div>
+      </nav>
+
+      {%for a in blogs%}
+      <section id="quizBox">
+        <article id="quiz1"> 
+          <div style="width: 900px; height: 200px;  padding-left: 100px;">
+            <p id="question" style="padding: 30px;">{{a.title}}</p>
+          </div>
+          <div id="answerBox">
+            <div id="quiz1answer1">
+              {{a.num1}}
+            </div>
+            <div id="quiz1answer2">
+              {{a.num2}}
+            </div>
+            <div id="quiz1answer3">
+              {{a.num3}}
+            </div>
+            <div id="quiz1answer4">
+              {{a.num4}}
+            </div>
+          </div>
+        </article>
+        
+        <article id="explanation">
+          <div id="explainBox">
+            커서를 올리면 답이 보입니다.<br>
+            <p id="explainMain">{{a.explain}}</p>
+          </div>   
+        </article>
+        <article id="commentBox">
+          <div id="writeComment">
+            <div style="padding: 15px 0px 5px 0px;">
+              <form action="{% url 'update' a.id %}" method='POST' style="float: right;">
+                {% csrf_token %}
+              <textarea name="comment" id="textareaID" cols="100" rows="3"></textarea>
+              <input type='submit' style="height: 80px; width: 100px;" value="댓글달기">
+              </form>
+            </div>
+            <div id="otherComment" style='height:200px;'>
+              익명(152asd241) : 이거 못 맞추면 ;;
+              <br>
+              익명(153efq547) : EZ
+              <br>
+              익명(153xps115) : 손풀기로 좋네요 ㅎㅎ
+              <br>
+              익명(153wes765) : {{a.comment}}
+            </div>
+          </div>
+        </article>
+      </section>
+      {%endfor%}
+    </div>
+</body>
+</html>
