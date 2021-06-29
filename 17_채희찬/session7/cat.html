@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 고양이 화면 {% endblock %}
+{% block link %} {% static 'css/cat.css' %} {% endblock %}
+{% block url %}  {% endblock %}
+{% block content %}
+<div class="bodystyle">
+    <h1>고양이 구경하기</h1>
+
+    {% for a in cats %}
+    <div>
+        <h2>{{a.name}}</h2>
+        <h4>{{a.birthday}}</h4>
+        <h4>{{a.parents}}</h4>
+        <p>{{a.body}}</p>
+        <p><img src="{{ a.image.url }}" alt="안나와요" /></p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
