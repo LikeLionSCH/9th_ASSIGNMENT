@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 투 두 리스트 {% endblock %}
+{% block content %}
+    <h1>To do List</h1>
+
+    <form action="{% url 'update' todo.id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>제목: <input type="text" name="title" value="{{ todo.title }}"></p>
+        <p>작성자: <input type="text" name="author" value="{{ todo.author }}"></p>
+        <p>계획!: <textarea name="body" cols="180" row="300">{{ todo.body }}</textarea></p>
+        <button type="submit">submit</button>
+    </form>
+{% endblock %}
