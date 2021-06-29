@@ -1,18 +1,14 @@
-from django.shortcuts import render, get_object_or_404
-
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import *
-
 from django.utils import timezone
 
 # Create your views here.
 def home (request):
     blogs = Blog.objects.all()
-
     return render(request, 'home.html', {'blogs':blogs})
 
 def cat (request):
     porsches = Porsche.objects.all()
-
     return render (request, 'cat.html', {'porsches':porsches})
 
 def detail(request, id):
@@ -32,4 +28,20 @@ def create(request):
     new_blog.save()
     return redirect('home')
 
+def edit(request, id):
+    blog = Blog.objects.get(id = id)
+    return render(request, 'edit.html', {'blog': blog})
+
+def update(request, id):
+    update_blog = Blog.objects.get(id = id)
+    update_blog.title = request.POST['title']
+    update_blog.author = request.POST['author']
+    update_blog.body = request.POST['body']
+    update_blog.save()
+    return redirect('detail', update_blog.id) 
+
+def delete(requset, id):
+    delete_blog = Blog.objects.get(id = id)
+    delete_blog.delete()
+    return redirect('home')
 
