@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자세히 보기</title>
+</head>
+<body>
+    <div class="body-style">
+        <p class="title-style">자세히 보기</p>
+        <h1>제목 : {{book.title}}</h1>
+        <h5>작가 : {{book.author}}</h5>
+        <h5>가격 : {{book.price}}</h5>
+        {{book.body}}
+        <hr>
+        <a href="{% url 'edit' book.id %}"><input type="button" value="수정하기"></a>
+        <a href="{% url 'delete' book.id %}"><input type="button" value="삭제하기"></a>
+    </div>
+</body>
+</html>

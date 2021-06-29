@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>책 올리기</title>
+</head>
+<body>
+    <div class="bodystyle">
+        <h1>책 올리기</h1>
+
+        <form action="{% url 'create' %}" method="POST">
+            {% csrf_token %}
+            <p>제목 : <input type="text" name="title"></p>
+            <p>작가 : <input type="text" name="author"></p>
+            <p>가격 : <input type="number" name="price"></p>
+            <p>내용 : <textarea name="body"cols="30" rows="10"></textarea></p>
+            <button type="submit">submit</button>
+        </form>
+    </div>
+</body>
+</html>
