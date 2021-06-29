@@ -1,4 +1,4 @@
-"""blogproject URL Configuration
+"""catproject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,13 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from blog import views as b
+from cat import views as b
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', b.home, name='home'),
-    path('home', b.home, name='home'),
-    path('cat', b.cat, name="cat"),
+    path('',b.home, name="home"),
+    path('<str:id>', b.detail, name='detail'),
+    path('new/', b.new, name='new'),
+    path('create/', b.create, name='create'),
+    path('edit/<str:id>', b.edit, name='edit'),
+    path('update/<str:id>', b.update, name='update'),
+    path('delete/<str:id>', b.delete, name='delete'),
     ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
