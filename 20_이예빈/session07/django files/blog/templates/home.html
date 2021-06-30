@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 홈 화면 {% endblock %}
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+{% block content %}
+
+        <h1 style="color:blue">Hello, this is Home !</h1>
+        <h3>블로그 내용은 아래와 같아요! </h3>
+        <br><br>
+        {% for b in blogs %}
+            <h2 style="text-decoration:underline">{{b.title}}</h2>
+            <br>
+            <h5>작성자: {{b.author}}</h5>
+            <h5>작성날짜: {{b.pub_date}}</h5>
+            <br>
+            <div class="bodystyle">{{b.body}}</div>
+            <br>
+            <p><img src="{{b.image.url}}" width="300" alt="사진 로딩 실패" /></p> 
+            <br><br>
+        {% endfor %}
+
+{% endblock %}
