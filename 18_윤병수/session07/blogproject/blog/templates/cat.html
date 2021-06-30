@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 고양이화면 {% endblock %}
+{% block link %} {% static 'css/cat.css'%} {% endblock %}
+{% block content %}
+
+<body>
+    <h1>평택이 좋아~ 택도없지~</h1>
+    <h2>평택이 좋아요~</h2>
+
+    {%for a in cats%}
+    <div>
+        <h2>{{a.title}}</h2>
+        <h4>{{a.pub_date}}</h4>
+        <h4>{{a.author}}</h4>
+        <p class="bodystyle">{{a.body}}</p>
+        <p><img src="{{ a.image.url }}" alt="안나와요" /></p>
+    </div>
+    {%endfor%}   
+{% endblock %}
+</body>
+</html>

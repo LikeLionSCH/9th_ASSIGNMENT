@@ -1,0 +1,41 @@
+body{
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row-reverse;
+}
+#contents{
+    display:flex;
+    border:1px solid black;
+    flex-flow:row wrap;
+    flex-basis:90%;
+    justify-content:space-around;
+    align-content:flex-start;
+}
+.contentbox{
+    display:flex;
+    flex-direction:column;
+    width:30%;
+    margin-top:10%;
+}
+.catImg{
+    border-radius:15px;
+}
+.catName{
+    background-color:grey;
+    border:1px solid black;
+    border-radius:15px;
+    text-decoration:underline;
+}
+.cetSex{
+    background-color:blueviolet;
+    border-radius:15px;
+}
+.catTrait{
+    background-color:black;
+    color:white;
+    border-radius:15px;
+}
+.date{
+    border-radius:15px;
+    border:1px solid brown;
+}
