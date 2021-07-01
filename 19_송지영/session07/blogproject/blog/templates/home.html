@@ -5,4 +5,14 @@
 {%block link%}{%static 'css/home.css'%}{%endblock%}
 {%block content%} 
 <h1 class="title">Hi! This is Jiyoung world!</h1>
+{%for a in blogs%}
+    <div>
+        <h3 class="title">{{a.title}}</h3>
+        <h4>{{a.pub_date}}</h4>
+        <h4>{{a.author}}</h4>
+        <p>{{a.body}}</p>
+        <p><img src="{{a.image.url}}" width="200" height="200" alt="안나와요"/></p>
+    </div>
+    {%endfor%}
+
 {%endblock%}
