@@ -1,0 +1,10 @@
+<body>
+    전체 글자 수 - {{total_len}} <br>
+    공백 제외 글자 수 - {{total_nospace_len}} <br>
+    ---- 단어 리스트 ----
+    <div>
+        {% for word, totalCount in wordDict %}
+            {{word}} <br>
+        {% endfor %}
+    </div>
+</body>

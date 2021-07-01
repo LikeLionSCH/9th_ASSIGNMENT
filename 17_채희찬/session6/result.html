@@ -1,0 +1,19 @@
+<body>
+    전체 글자 수 - {{total_len}}
+    <br>
+    공백 제외 글자 수 - {{except_blank}}
+    <br>
+    ----단어 리스트----
+    <br>
+    {% for word in words %}
+        {{word}}
+        <br>
+    {% endfor %}
+    <a href="{% url 'count' %}">count로 이동</a>
+    <br>
+    <a href="{% url 'test' %}">test로 이동</a>
+    <br>
+    <a href="{% url 'test1' %}">test1로 이동</a>
+    <br>
+    <a href="{% url 'test2' %}">test2로 이동</a>
+</body>
