@@ -10,10 +10,8 @@ def study_detail(request, id):
     study = get_object_or_404(Study, pk=id)
     return render(request, 'study_detail.html', {'study':study})
 
-def study_new(request):
-    return render(request, 'study_new.html')
-
-def study_create(request):
+def study_post(request):
+    if request.method == 'POST':
         study_new = Study()
         study_new.title = request.POST['title']
         study_new.author = request.POST['author']
@@ -22,18 +20,20 @@ def study_create(request):
         study_new.pub_date = timezone.now()
         study_new.save()
         return redirect('study')
+    else:
+        return render(request, 'study_new.html')
 
-def study_edit(request, id):
-    study = Study.objects.get(id=id)
-    return render(request, 'study_edit.html', {'study':study})
-    
 def study_update(request, id):
-    update_study = Study.objects.get(id=id)
-    update_study.title = request.POST['title']
-    update_study.author = request.POST['author']
-    update_study.body = request.POST['body']
-    update_study.save()
-    return redirect('study_detail', update_study.id)
+    if request.method == 'POST':
+        update_study = Study.objects.get(id=id)
+        update_study.title = request.POST['title']
+        update_study.author = request.POST['author']
+        update_study.body = request.POST['body']
+        update_study.save()
+        return redirect('study_detail', update_study.id)
+    else:
+        study = Study.objects.get(id=id)
+        return render(request, 'study_edit.html', {'study':study})
 
 def study_delete(request, id):
     delete_study = Study.objects.get(id=id)
