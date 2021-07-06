@@ -69,8 +69,9 @@ def update_comment(request, cat_id, comment_id):
         up_comment.save()
         return redirect('detail', cat_id)
     else:
-        comment = get_object_or_404(Comment,pk=comment_id)
-        return render(request, 'comment_edit.html', {'comment':comment})    
+        cat = get_object_or_404(Cat, pk=cat_id)
+        comment = get_object_or_404(Comment, pk=comment_id)
+        return render(request, 'comment_edit.html', {'cat':cat, 'comment':comment})    
 
 
 
