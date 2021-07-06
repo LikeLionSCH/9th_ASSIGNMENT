@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/django,windows,visualstudio
-# Edit at https://www.toptal.com/developers/gitignore?templates=django,windows,visualstudio
+# Created by https://www.toptal.com/developers/gitignore/api/windows,django,visualstudio,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=windows,django,visualstudio,visualstudiocode
 
 ### Django ###
 *.log
@@ -149,6 +149,22 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -542,15 +558,8 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
 
 # Local History for Visual Studio Code
-.history/
 
 # Windows Installer files from build outputs
 
@@ -561,4 +570,4 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/django,windows,visualstudio
+# End of https://www.toptal.com/developers/gitignore/api/windows,django,visualstudio,visualstudiocode
