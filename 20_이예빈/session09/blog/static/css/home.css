@@ -1,0 +1,37 @@
+#contents{
+    display:flex;
+    justify-content:center;
+    flex-flow:row wrap;
+    overflow-y:scroll;
+    height:90vh;
+}
+.contentbox{
+    width:400px;height:400px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    margin:2%;padding:1%;
+    border:1px solid rgb(209, 160, 255);
+    border-radius:10px;
+}
+img{border-radius:15px;}
+.title{
+    font-size:150%;
+    font-weight:bold;
+    text-decoration:underline;
+    margin:5% 0;
+}
+#image{
+    margin-top:5%;
+    border-radius:15px;
+}
+.noImage{
+    width:100%;height:60%;
+    background-color:rgb(255, 255, 255);
+    border-radius:15px;
+}
+.authorStyle{
+    background-color:antiquewhite;
+    border-radius:10px;
+}
