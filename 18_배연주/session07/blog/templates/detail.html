@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %} 디테일 페이지 {% endblock %}
+{% block content %}
+    <h1>글 제목 : {{ blog.title }}</h1>
+    <h5>작성자: {{ blog.author }}</h5>
+    <h3>게시일 : {{ blog.pub_date }}</h3>
+    <hr>
+    <p><img src="{{ blog.image.url }}" width="200" height="200 "alt="안나와요"></p>
+    <p>{{ blog.body }}</p>
+    <a href="{% url 'edit' blog.id %}"><input type="button" value="수정하기"></a>
+    <a href="{% url 'delete' blog.id %}"><input type="button" value="삭제하기"></a>
+
+{% endblock %}

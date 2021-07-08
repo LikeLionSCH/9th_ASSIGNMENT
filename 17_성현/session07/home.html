@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+{%load static%}
+{%block title%} 홈화면 {%endblock%}
+{%block link%} {%static 'css/home.css'%} {%endblock%}
+{%block content%}
+<h1>블로그</h1>
+{%for a in blogs%}
+    <h2>{{a.title}}</h2>
+    <h3>{{a.pub_date}}</h3>
+    <h4>{{a.author}}</h4>
+    <p class="bodystyle">{{a.body}}</p>
+    <p><img class="imgSize" src="{{ a.image.url }}" alt="안나와요"/></p>
+{%endfor%}
+{%endblock%}

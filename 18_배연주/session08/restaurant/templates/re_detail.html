@@ -1,0 +1,19 @@
+{% extends 're_base.html' %} 
+{% load static %} 
+
+{% block title %} 디테일 페이지 {% endblock %} 
+{% block content %}
+    <h1>이름 : {{ restaurant.name }}</h1>
+    <h5>장소 : {{ restaurant.address }}</h5>
+    <h5>작성자: {{ restaurant.author }}</h5>
+    <h3>날짜 : {{ restaurant.date }}</h3>
+
+    <hr />
+    <p>{{ restaurant.body }}</p>
+    <a href="{% url 're_edit' restaurant.id %}">
+        <input type="button" value="수정하기"/>
+    </a>
+    <a href="{% url 're_delete' restaurant.id %}">
+        <input type="button" value="삭제하기"/>
+    </a>
+{% endblock %}

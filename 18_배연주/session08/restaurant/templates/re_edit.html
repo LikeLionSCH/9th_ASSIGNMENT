@@ -1,0 +1,15 @@
+{% extends 're_base.html' %} 
+{% load static %} 
+
+{% block title %} 게시글 만들기 {% endblock %}
+{% block content %}
+    <h1>글 수정하기 </h1>
+    <form action="{% url 're_update' restaurant.id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>제목 : <input type="text" name="name" value="{{ restaurant.name }}"></p>
+        <p>주소 : <input type="text" name="address" value="{{ restaurant.address }}"></p>
+        <p>작성자 : <input type="text" name="author" value="{{ restaurant.author }}"></p>
+        <p>본문 : <textarea name="body" cols="300" row="100">{{ restaurant.body }}</textarea></p>
+        <button type="submit">submit</button>
+    </form>
+{% endblock %}
