@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 홈 화면 {% endblock %}
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+{% block content %}
+
+    <h1>블로그 맛보기</h1>
+
+    {%for a in blogs%}
+    <div>
+        <h1>{{a.id}}</h1>
+        <h2>{{a.title}}</h2>
+        <h4>{{a.pub_date}}</h4>
+        <h4>{{a.author}}</h4>
+        <p>{{a.body}}</p>
+        {% if a.image %}
+        <p><img src="{{ a.image.url }}" alt="사진이 안나와.." /></p>
+        {% endif %}
+        <a href="{% url 'detail' a.id %}">자세히보기</a>
+    </div>
+    <hr>
+    {%endfor%}
+{% endblock %}
