@@ -1,0 +1,107 @@
+<!-- 카테고리: (최신 시사, 정치•행정, 경제•산업, 사회•환경, 국제•외교, 북한•안보, 문화•미디어, 과학•IT, 스포츠•엔터, 인물•용어)
+      문제: (기여 점수/예상 레벨)가 나오고 풀면 정답여부없이 정답해설
+  #F0CBB0
+	#8C6751
+	#AF8C72
+
+ -->
+ {% extends "base.html" %}
+ {% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/quiz_non4.css' %}">
+{% endblock %}
+
+{% block body %} 
+<div id="flexMain">
+  <h2>"이민수"님 <span class="acropolis">아크로폴리스 퀴즈</span>에 오신 것을 환영합니다.</h2>
+  <nav>
+    <div class="categoryChooseBox" style="flex-wrap: wrap;">
+      <div class="categoryChoose"><strong>최신 시사</strong></div>
+      <div class="categoryChoose"><strong>정치 • 행정</strong></div>
+      <div class="categoryChoose"><strong>경제 • 산업</strong></div>
+      <div class="categoryChoose"><strong>사회•환경</strong></div>
+      <div class="categoryChoose"><strong>국제 • 외교</strong></div>
+      <div class="categoryChoose"><strong>북한 • 안보</strong></div>
+      <div class="categoryChooseBox2" style="width: 1000px; height: auto; display: flex; justify-content: center; align-items: center;">
+        <div class="categoryChoose"><strong>문화 • 미디어</strong></div>
+        <div class="categoryChoose" ><strong>과학•IT</strong></div>
+        <div class="categoryChoose"><strong>스포츠 • 엔터</strong></div>
+        <div class="categoryChoose"><strong>인물 • 용어</strong></div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="quizBox">
+    <article id="quiz1"style="margin-bottom: 100px;"> 
+      <div style="width: 900px; height: 200px;  padding-left: 100px;">
+        <span id="questionNum" >
+          {{blog.Qnum}}
+        </span>
+        <span id="questionNum" style="margin-left: 400px;">
+          {{blog.field}}
+        </span>
+        <div id="question" style="padding: 30px;font-size: 30px; cursor:auto">
+          {{blog.title}}
+          <div id="hint">
+            {{blog.explain}}
+          </div>
+        </div>
+      </div>
+      <span style=" margin-left: 50px; margin-right: 50px;">
+        <a href="{% url 'first' %}">
+          <img src="{% static 'images/left1.png' %}" width="32" height="32">
+        </a>
+        </span>
+      <div id="answerBox">
+        
+        <div id="quiz1answer1"><a href="{% url 'answer' blog.id %}">
+          {{blog.num1}}</a>
+        </div>
+        <div id="quiz1answer2"><a href="{% url 'answer' blog.id  %}">
+          {{blog.num2}}</a>
+        </div>
+        <div id="quiz1answer3"><a href="{% url 'answer' blog.id  %}">
+          {{blog.num3}}</a>
+        </div>
+        <div id="quiz1answer4"><a href="{% url 'answer'  blog.id %}">
+          {{blog.num4}}</a>
+        </div>
+      </div>
+      <span style="margin-left: 50px;">
+        <a href="{% url 'second' %}">
+          <img src="{% static 'images/right1.png' %}" width="32" height="32">
+        </a>
+      </span>
+    </article>
+    
+    <article id="commentBox">
+      <div id="writeComment">
+        <div id="writeBox"  style="margin-bottom: 100px;">
+          <form action="{% url 'create_comment' blog.id %}" method='POST' style="display: flex;">
+            {% csrf_token %}
+          <textarea style="display: flex;" name="content" id="textareaID" cols="100" rows="3"></textarea>
+          <input id="inputButton" style="display: flex;" type='submit' value="댓글달기">
+          </form>
+        </div>
+        {% for comment in blog.comment_set.all %}
+        <div class="comment">
+          <div class="comment_top">
+              <div><img src="{% static 'images/schlikelion.png' %}" id="profile-picture" width="50" height="50" class="rounded-circle"></div>
+              <div><p><strong>익명</strong><br>2021.07.02. 00.58.59</p></div>
+          </div>
+          <div class="comment_main">
+              <div><p>{{comment.content}}</p></div>
+          </div>
+          <div class="comment_bottom">
+              <div><a href="#"><img class="thumb" src="{% static 'images/down.png' %}" width="32" height="32"></a></div>
+              <div><a href="#"><img class="thumb" src="{% static 'images/up.png' %}" width="32" height="32"></a></div>
+          
+              <div id="reply_write"><a href="{% url 'update_comment' blog_id=blog.id comment_id=comment.id %}" ><strong>답글 수정</strong></a></div>
+          </div>  
+          {%endfor%}
+      </div>
+      </div>
+    </article>
+  </section>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 're_base.html' %} 
+{% load static %} 
+{% block title %} 홈 화면 {%endblock %} 
+{% block link %}{% endblock %} 
+{% block content %}
+
+<h1>맛집</h1>
+<br>
+{% for a in restaurants %}
+<div class="bodystyle">
+  <h2>{{a.name}}</h2>
+  <h5>장소 : {{ a.address }}</h5>
+  <h4>{{a.date}}</h4>
+  <p>{{a.author}}</p>
+  <p>{{a.body}}</p>
+  <a href="{% url 're_detail' a.id %}">자세히보기</a>
+</div>
+{% endfor %} {% endblock %}

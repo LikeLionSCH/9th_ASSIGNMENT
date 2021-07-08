@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+{%load static%}
+{%block title%}스터디 디테일{%endblock%}
+{%block content%} 
+    <h1>글제목 : {{study.title}}</h1>
+    <h3>작성자 : {{study.author}}</h3>
+    <h5>게시일 : {{study.pub_date}}</h5>
+    <hr>
+    <p><img src="{{study.image.url}}" width="200" height="200" alt="안나와요"></p>
+    <p>{{study.body}}</p>
+    <a href="{% url 'study_update' study.id %}"><input type="button" value="수정하기"></a>
+    <a href="{% url 'study_delete' study.id %}"><input type="button" value="삭제하기"></a>
+{%endblock%}

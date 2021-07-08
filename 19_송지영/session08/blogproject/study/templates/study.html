@@ -1,0 +1,20 @@
+{%extends "base.html"%}
+{%load static%}
+
+{%block title%}스터디 화면{%endblock%}
+{%block link%}{%static 'css/study.css'%}{%endblock%}
+{%block content%} 
+    <h1>공부한 후 인증글을 작성해주세요!</h1>
+    <br>
+    <br>
+    {% for a in studys %}
+        <div>
+            <h3 class="title">{{a.title}}</h3>
+            <h4>{{a.pub_date}}</h4>
+            <h4>{{a.author}}</h4>
+            <p>{{a.body}}</p>
+            <p><img src="{{a.image.url}}" alt="안나와요" width="200" height="200"/></p>
+            <a href="{% url 'study_detail' a.id %}">자세히보기</a>
+        </div>
+    {%endfor%}
+    {%endblock%}
