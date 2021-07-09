@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %} 홈 화면 {% endblock %} 
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+{% block content %}
+
+<h1>BLOG</h1>
+
+{% for a in blogs %}
+<div class="bodystyle">
+  <h2>{{a.title}}</h2>
+  <h4>{{a.pub_date}}</h4>
+  <p>{{a.author}}</p>
+  <p>{{a.body}}</p>
+  <p>
+    <img src="{{ a.image.url }}" alt="초코 사진" width="300" height="300"/>
+  </p>
+  <a href="{% url 'detail' a.id %}">자세히보기</a>
+</div>
+{% endfor %} 
+{% endblock %}

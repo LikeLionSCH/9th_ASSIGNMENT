@@ -1,0 +1,12 @@
+<body>
+    <div style="text-align:center">
+        <h1>글자를 입력해보세요!</h1>
+        <form action="{% url 'results' %}" method="POST">
+        {% csrf_token %} 
+            <textarea name="text" cols="60" rows="10">
+            </textarea>
+            <br><br>
+            <input type="submit" value="제출하기">
+        </form>
+    </div>
+</body>

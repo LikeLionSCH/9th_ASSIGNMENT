@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %} 초코 화면 {% endblock %}
+{% block link %} {% static 'css/choco.css' %} {% endblock %} 
+{% block content %}
+
+<h1>CHOCO</h1>
+
+{% for c in chocos %}
+<div class="bodystyle">
+  <h2>{{c.title}}</h2>
+  <h4>{{c.pub_date}}</h4>
+  <p>{{c.author}}</p>
+  <p>{{c.body}}</p>
+  <p>
+    <img src="{{ c.image.url }}" alt="초코 사진" width="300" height="300" />
+  </p>
+</div>
+{% endfor %} 
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}디테일 페이지 {% endblock %}
+{% block content %}
+    <h1>글 제목 : {{ cat.title }}</h1>
+    <h3>작성자 : {{ cat.author }}</h3>
+    <h3>게시일 : {{ cat.pub_date }}</h3>
+    <br>
+    <p><img src = "{{ cat.image.url }}" width="200" height="200" alt="안나와요" /></p>
+    <p>{{cat.body}}</p>
+    <a href="{% url 'edit' cat.id %}"><input type="button" value="수정하기"></a>
+    <a href="{% url 'delete' cat.id %}"><input type="button" value="삭제하기"></a>
+
+{% endblock %}

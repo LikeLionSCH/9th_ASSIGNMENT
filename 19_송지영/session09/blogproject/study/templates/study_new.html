@@ -1,0 +1,15 @@
+{%extends "base.html"%}
+{%load static%}
+{%block title%}스터디 인증하기{%endblock%}
+{%block content%} 
+    <h1>스터디 인증하기</h1>
+
+    <form action="{% url 'study_post' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>제목 : <input type="text" name="title"></p>
+        <p>작성자 : <input type="text" name="author"></p>
+        <p>이미지 : <input type="file" name="image"></p>
+        <p>본문 : <textarea name="body" cols="30" row="10"></textarea></p>
+        <button type="submit">submit</button>
+        </form>
+    {%endblock%}

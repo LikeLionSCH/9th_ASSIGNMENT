@@ -1,0 +1,14 @@
+{%extends "base.html"%}
+{%load static%}
+{%block title%}스터디 인증 수정하기{%endblock%}
+{%block content%} 
+<h1>스터디 인증 수정 하기</h1>
+
+<form action="{% url 'study_update' study.id %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>제목 : <input type="text" name="title" value="{{study.title}}"></p>
+    <p>작성자 : <input type="text" name="author" value="{{study.author}}"></p>
+    <p>본문 : <textarea name="body" cols="100" row="300">{{study.body}}</textarea></p>
+    <button type="submit">submit</button>
+    </form>
+{%endblock%}

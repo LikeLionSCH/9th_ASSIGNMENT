@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%load static%}
+
+{%block title%} 홈화면 {%endblock%}
+{%block link%}{%static 'css/home.css'%}{%endblock%}
+{%block content%}
+    <h1>고양이 구경하기</h1>
+    {%for a in cats%}
+    <div>
+        <h2>{{a.title}}</h2>
+        <h4>{{a.pub_date}}</h4>
+        <h4>{{a.author}}</h4>
+        <p class="bodystyle">{{a.body}}</p>
+        <p><img src="{{a.image.url}}" alt="안나와요" /></p>
+        <a href = "{% url 'detail' a.id %}">자세히 보기</a>
+    </div>
+    {%endfor%}
+{%endblock%}
