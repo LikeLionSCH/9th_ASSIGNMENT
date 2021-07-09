@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %} 홈화면 {% endblock %}
-{% block link %} {% static 'css/home.css'%} {% endblock %}
 {% block content %}
     <h1>블로그 맛보기</h1>
     <h2> < 블로그 맛보기 장고 세션 준비 > </h2>
@@ -14,10 +12,12 @@
         <h4>{{ a.pub_date }}</h4>
         <h4>{{ a.author }}</h4>
         <p>{{ a.body }}</p>
+        {% if a.image %}
         <p><img src="{{ a.image.url }}" width="200" height="200" alt="안나와요" /></p>
+        {% endif %}
         <a href="{% url 'detail' a.id %}">자세히보기</a>
     </div>
     <hr>
-    {%endfor%}
+    {% endfor %}
 {% endblock %}
 
