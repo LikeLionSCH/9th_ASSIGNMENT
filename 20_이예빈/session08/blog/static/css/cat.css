@@ -1,0 +1,56 @@
+.contentbox, .catName, .catSex, .catTrait, .date{
+    display:flex;
+    border-radius:15px;
+    box-shadow:rgb(87, 87, 87) 1px 1px 3px;
+}
+#contents{
+    display:flex;
+    flex-flow:row wrap;
+    flex-basis:70%;
+    justify-content:space-around;
+    align-content:center;
+    align-items:center;
+    background-color:hsl(0, 7%, 92%);
+    height:30%;
+}
+.contentbox{
+    background-color:#dceaf7;
+    margin:1%;padding:3%;
+    flex-direction:column;
+    width:600px;height:50%;
+    align-items:center;
+    justify-content:space-around;
+    max-width:700px;
+}
+.image{
+    margin:3%;
+}
+.catName, .catSex, .catTrait, .date{
+    width:70%;
+    margin-top:2%;
+    padding:1%;
+    align-items:center;
+    justify-content:center;
+}
+.catImg{
+    border-radius:15px;
+    box-shadow:rgb(87, 87, 87) 1px 2px 3px;
+}
+}
+.catName{
+    background-color:rgb(248, 248, 248);
+    color:grey;
+    text-decoration:underline;
+}
+.catSex{
+    background-color:rgb(191, 217, 248);
+}
+.catTrait{
+    background-color:rgb(131, 131, 131);
+    color:white;
+
+    height:5rem;
+}
+.date{
+    background-color:rgb(242, 222, 243);
+}

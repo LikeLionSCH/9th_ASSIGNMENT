@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 홈 화면 {% endblock %}
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+{% block content %}
+
+  <h1>홈 화면 근데 이제 나재민을 곁들인</h1>
+
+    {% for a in blogs %}
+    <div>
+        <h2>{{a.title}}</h2>
+        <h4>{{a.pub_date}}</h4>
+        <h4>{{a.author}}</h4>
+        <p class="bodystyle">{{a.body}}</p>
+        <p><img src="{{ a.image.url }}" width="320" height="400" alt="안 나와요" /></p>
+    </div>
+    {% endfor %}
+{% endblock %}
