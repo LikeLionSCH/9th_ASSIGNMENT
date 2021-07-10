@@ -1,0 +1,19 @@
+{%extends "base.html" %}
+{%load static%}        
+        
+{%block title%}Write{%endblock%}
+{%block content%}
+
+<h1>일기 쓰기</h1>
+
+<form action="{%url 'create' %}" method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    <p>제목 : <input type="text" name="title"></p>
+    <p>주인 : <input type="text" name="author"></p>
+    <p>이미지 : <input type="file" name="image"></p>
+    <p>내용 : <textarea name="body" cols="30" rows="10"></textarea></p>
+    <hr>
+    <button type="submit">저장</button>
+</form>
+
+{%endblock%}
