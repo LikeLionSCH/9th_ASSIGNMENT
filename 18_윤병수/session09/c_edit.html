@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} 댓글 수정페이지 {% endblock %}
+{% block content %}
+    
+<h1>댓글 수정하기</h1>
+
+<form action="{% url 'update_comment' blog.id comment.id %}" method="POST">
+    {% csrf_token %}
+    <p>작성자 : <input type="text" name="author" value="{{ comment.author }}"></p>
+    <p>본문 : <textarea name="content" cols="100" row="300">{{ comment.content }}</textarea></p>
+    <button type="submit">submit</button>
+</form>
+
+{% endblock %}
