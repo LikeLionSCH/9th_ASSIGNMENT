@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%load static%}
+{%block title%} 다이어리 쓰기 {%endblock%}
+{%block content%}
+
+    <h1>내 맘대로 다이어리 쓰기</h1>
+
+    <form action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        <p>제목 : <input type="text" name="title"></p>
+        <p>작성자 : <input type="text" name="author"></p>
+        <p>이미지 : <input type="file" name="image"></p>
+        <p>다이어리 내용 : <textarea name="body" cols="30" row="10"></textarea></p>
+        <p>오늘 할 일 : <textarea name="todolist" cols="30" row="10"></textarea></p>
+        <button type="submit">제출하기</button>
+    </form>
+
+{%endblock%}
