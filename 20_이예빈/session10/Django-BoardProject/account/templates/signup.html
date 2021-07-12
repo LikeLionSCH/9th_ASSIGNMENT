@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Sign Up {% endblock %}
+{% block content %}
+
+    <div class="borderStyle">
+        <h2> 회원가입 </h2>
+        <form method="POST" action="{% url 'user_signup' %}">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="아이디를 입력하세요"><br>
+            <input type="text" name="nickname" placeholder="별명을 입력하세요"><br>
+            <input type="text" name="university" placeholder="재학 중인 대학교를 입력하세요"><br>
+            <input type="password" name="password" placeholder="비밀번호를 입력하세요"><br>
+            <input type="password" name="password2" placeholder="비밀번호를 한 번 더 입력하세요"> <br><br>
+            <button>회원가입</button>
+            <a href="{% url 'home' %}"><button type="button"> 실행 취소 </button></a> <br>
+        </form>
+    </div>
+
+{% endblock %}

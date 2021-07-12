@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} edit {% endblock %}
+{% block content %}
+
+    <div class="borderStyle">
+        <form action="{% url 'edit' board.id %}" method="POST">
+           {% csrf_token %}
+
+           <div> 제목 : <input type="text" name="title" value="{{board.title}}"></div>
+           <div> 작성자 : {{board.author}}
+           <div> 생성 시간 : {{board.pub_date}}</div>
+           <div> 본문 : <input type="text" name="body" value="{{board.body}}"></div>
+            <button> 수정하기 </button>
+        </form>
+    </div>
+
+
+{% endblock %}

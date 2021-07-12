@@ -1,0 +1,11 @@
+.header{
+    padding:3%;
+    display:flex;
+    justify-content:center;
+    border-bottom:2px solid black;
+    background-color:rgb(255, 243, 226);
+}
+input{
+    border-radius:15px;
+    margin:3%;
+}
