@@ -1,0 +1,20 @@
+{%extends "base.html" %}
+{%load static%}        
+        
+{%block title%}Home{%endblock%}
+{%block link%}{%static 'css/home.css'%}{%endblock%}
+{%block content%}
+
+{%for d in diarys%}
+<div class="divStyle">
+    <h2>{{d.title}}</h2>
+    <h4>{{d.pub_date}}</h4>
+    <h4>{{d.author}}</h4>
+    <p>{{d.body}}</p>
+    <p><img src="{{d.image.url}}" alt="사진" /></p>
+    <a href="{%url 'detail' d.id%}">view</a>
+</div>
+<hr>
+{%endfor%}
+
+{%endblock%}

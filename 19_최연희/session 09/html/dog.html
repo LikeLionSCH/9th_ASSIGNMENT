@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block title %} 귀여운 화면 {% endblock %}
+{% block link %} {% static 'dog.css'%} {% endblock %}
+{% block content %}
+
+<body>
+    <h1>내 블로그</h1>
+    <h2>귀여운거 모아모아</h2>
+
+    {% for a in rabbits%}
+    <div>
+        <h2>{{a.title}}</h2>
+        <h4>{{a.pub_date}}</h4>
+        <h4>{{a.author}}</h4>
+        <p>{{a.body}}</p>
+        <p>{{a.music}}</p>
+        <p>{{a.movie}}</p>
+        <p class="style">{{a.title}}</p>
+        <p><img width="300px" height="300px" src="{{a.image.url}}"></p>
+    </div>
+    {%endfor%}
+{% endblock %}
+
+</body>

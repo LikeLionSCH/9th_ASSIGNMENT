@@ -1,0 +1,15 @@
+{% extends "base_1.html" %}
+{% load static %}
+{% block title %} 디테일2페이지 {% endblock %}
+{% block content %}
+
+    <h1>글 제목 : {{ notice.title }}</h1>
+    <h5>작성자 : {{ notice.author }}</h5>
+    <h5>게시일 : {{ notice.pub_date }}</h5>
+    <hr>
+    <p><img src="{{ notice.image.url }}" width="200" height="200" alt="안나와요" /></p>
+    <p>{{ notice.body }}</p>
+    <a href="{% url 'edit_1' notice.id %}"><input type="button" value="수정하기"></a>
+    <a href="{% url 'delete_1' notice.id %}"><input type="button" value="삭제하기"></a>
+    
+{% endblock %}

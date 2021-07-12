@@ -1,0 +1,20 @@
+{%extends "base.html"%}
+{%load static%}
+
+{%block title%} 토끼화면 {%endblock%}
+{%block link%} {%static 'rabbit.css'%} {%endblock%}
+{%block content%}
+
+    <h1 class="style">다이어리 구경하기</h1>
+    <h2 class="bodystyle">귀여운 토끼 보고 가세요</h2>
+
+    {%for a in rabbits%}
+    <div>
+        <h2>{{a.title}}</h2>
+        <h4>{{a.pub_date}}</h4>
+        <h4>{{a.author}}</h4>
+        <h4>{{a.body}}</h4>
+        <p><img width="300px" height="300px" src="{{a.image.url}}"></p>
+    </div>
+    {%endfor%}
+{%endblock%}

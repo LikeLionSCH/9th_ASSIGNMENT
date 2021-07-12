@@ -7,6 +7,7 @@
 
   <h1>홈 화면 근데 이제 나재민을 곁들인</h1>
 
+    <hr>
     {% for a in blogs %}
     <div>
         <h2>{{a.title}}</h2>
@@ -14,6 +15,8 @@
         <h4>{{a.author}}</h4>
         <p class="bodystyle">{{a.body}}</p>
         <p><img src="{{ a.image.url }}" width="320" height="400" alt="안 나와요" /></p>
+        <a href="{% url 'detail' a.id %}">자세히보기</a>
     </div>
+  </hr>
     {% endfor %}
 {% endblock %}

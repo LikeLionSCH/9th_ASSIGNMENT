@@ -1,0 +1,17 @@
+{%extends "base.html"%}
+{%load static%}
+{%block title%}update{%endblock%}
+{%block content%}
+
+    <div class="comment">
+        <p class="comment_title"><h2>댓글 수정</h2></p>
+        <form action="{% url 'update_comment' blog.id comment.id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>작성자 : <input type="text" name="author" value="{{comment.author}}"></p>
+        <p>제목 : <input type="text" name="content" value="{{comment.content}}"></p>
+        <button type="submit">수정</button>
+        </form>
+    </div>
+
+{%endblock%}
+

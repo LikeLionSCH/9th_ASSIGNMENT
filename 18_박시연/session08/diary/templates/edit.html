@@ -1,0 +1,18 @@
+{%extends "base.html" %}
+{%load static%}        
+        
+{%block title%}Edit{%endblock%}
+{%block content%}
+
+<h1>일기 수정하기</h1>
+
+<form action="{%url 'update' diary.id %}" method="POST" enctype="multipart/form-data">
+    {%csrf_token%}
+    <p>제목 : <input type="text" name="title" value="{{diary.title}}"></p>
+    <p>주인 : <input type="text" name="author" value="{{diary.author}}"></p>
+    <p>내용 : <textarea name="body" cols="30" rows="10">{{diary.body}}</textarea></p>
+    <hr>
+    <button type="submit">저장</button>
+</form>
+
+{%endblock%}
