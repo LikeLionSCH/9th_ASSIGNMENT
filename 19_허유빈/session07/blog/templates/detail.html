@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}디테일페이지 {% endblock %}
+{% block content %}
+
+    <h1>글 제목 : {{blog.title}}</h1>
+    <h3>작성자 : {{blog.author}}</h3>
+    <h3>게시일 : {{blog.pub_date}}</h3>
+    <hr>
+    {% if a.image %}
+    <p><img src="{{ blog.image.url }}" width="200" height="200" alt="안나와요" /></p>
+    {% endif %}
+    <p>{{ blog.body }}</p>
+    <a href="{% url 'update' blog.id %}"><input type="button" value="수정하기"></a>
+    <a href="{% url 'delete' blog.id %}"><input type="button" value="삭제하기"></a>
+
+<div>
+    <p class="commnet_title"><h2>댓글 달기</h2></p>
+    <form action="{% url 'create_comment' blog.id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>작성자 : <input type="text" name="author"></p>
+        <p>댓글 : <textarea name="content" cols="20" rows="10"></textarea></p>
+        <button type="submit">submit</button>
+    </form>
+</div>
+
+{% for comment in blog.comment_sest.all %}
+    <div class="commit__box">
+        <div class="comment_box_form">
+            <div class="user-id">
+                {{ comment.author }}
+            </div>
+            <div class="user-comment">{{comment.content|linebreaksbr }}</div>
+            <sub class="comment-data">{{ coment.created_at }}</sub>
+        </div>
+
+        <div class="comment-delete">
+            <a href="{% url 'delete_comment' blog.id comment.id %}">
+                <button class="comment-submit2">삭제</button>
+            </a>
+        </div>
+
+    </div>
+{% endblock %}

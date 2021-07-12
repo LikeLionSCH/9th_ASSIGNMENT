@@ -9,12 +9,15 @@
     <h2>블로그 맛보기 장고 세션 준비</h2>
 
     {%for a in blogs%}
-    <div>
+    <div>        
         <h2>{{a.title}}</h2>
         <h4>{{a.pub_date}}</h4>
         <h4>{{a.author}}</h4>
         <p>{{a.body}}</p>
+        {% if a.image %}
         <p class="bodystyle"><img width="300px" height="300px" src="{{ a.image.url }}" alt="안나와요"/></p>
+        <a href="{% url 'detail' a.id %}">자세히보기</a>
+        {% endif %}
     </div>
     {% endfor %}
 {% endblock %}
