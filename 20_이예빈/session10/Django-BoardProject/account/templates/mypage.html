@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My Page {% endblock %}
+{% block content %}
+
+    <div class="borderStyle">
+        <h1> 내 정보 </h1>
+        <div>아이디 : {{user.username}} <div>
+        <div>별명 : {{user.nickname}} </div>
+        <div>대학교: {{user.university}} </div>  
+    </div>
+      
+{% endblock %}

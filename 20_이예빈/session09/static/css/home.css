@@ -1,0 +1,33 @@
+
+#contents{
+    flex-flow:row wrap;
+    justify-content:space-around;
+    align-content:flex-start;
+}
+.contentbox{
+    width:250px;height:220px;
+    flex-direction:column;
+}
+#image{
+    border-radius:15px;
+}
+#title{
+    background-color:aqua;
+}
+.bodystyle{
+    font-weight:bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif Arial, sans-serif;
+    color:rgb(193, 193, 243);
+    border:1px solid grey;
+    border-radius:15px;
+}
+.authorStyle{
+    background-color:antiquewhite;
+    border:1px solid blueviolet;
+    border-radius:15px;
+}
+.date{
+    background-color:bisque;
+    border:1px solid black;
+    border-radius:15px;
+}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} detail {% endblock %}
+{% block content %}
+
+<div class="borderStyle">
+    <h3> 제목 : {{board.title}} </h3>
+    <p> 작성자  : {{board.author }} </p>
+    <p> 생성시간 : {{board.pub_date}} </p>
+    <p> 내용 : {{board.body}} </p>
+
+     {% if user == board.author %}
+        <a href="{% url 'edit' board.id %}"><button>수정하기</button></a>
+        <a href="{% url 'delete' board.id %}"><button>삭제하기</button></a>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+        <div class="comment">
+            <br><hr>
+            <div class="comment_title">댓글 작성하기</div>
+            <form action="{% url 'create_comment' board.id %}" method="POST">
+                {% csrf_token %}
+                <p> 작성자 : <strong> {{ user }} </strong> </p>
+                <p> 댓글 : <input type="text" name="content"></p>
+
+                <button>댓글 작성</button>
+            </form>
+        </div>
+    {% endif %}
+
+    <br><br><hr>
+    <div class="comment_title"> 댓글들 보기 </div>
+    <div class="comments">
+        {% for comment in board.comment_set.all %}
+            <div class="comment_box">
+                <div class="comment_box_form">
+                    <strong> {{ comment.writer }} </strong> : {{ comment.content|linebreaksbr }}
+                    </div>
+                <sub class="comment-date"> <span class="commentTitle">  작성 시간 </span> : {{ comment.created_at }} </sub>
+                <br>
+                </div>
+
+                {% if user == comment.writer %}
+                <div class="deleteComment">
+                    <a href="{% url 'delete_comment' board.id comment.id %}">
+                        <button class="comment-submit"> 댓글 삭제 </button>
+                    </a>
+                    <br><br>
+                </div>
+                {% endif %}
+         {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}

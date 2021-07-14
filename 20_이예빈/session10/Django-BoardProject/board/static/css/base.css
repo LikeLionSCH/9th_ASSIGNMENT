@@ -1,0 +1,49 @@
+.borderStyle{
+    width:40%;
+    background-color:rgb(255, 245, 231);
+    border:3px solid rgb(214, 214, 214);
+    padding:1%;margin:1%;
+    border-radius:15px;
+    color:black;
+}
+.header{
+    padding:3%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom:2px solid black;
+    background-color:rgb(255, 250, 200);
+}
+button{
+    border-radius:5px;
+    margin:2%;padding:1%;
+    background-color:bisque;
+    border:1px solid rgb(177, 177, 177);
+    width:100px;
+}
+button:hover{
+    background-color:aliceblue;
+    box-shadow:1px 1px rgb(156, 184, 209);
+}
+input{
+    width:200px;height:30px;
+    border:0.5px solid rgb(255, 192, 57);
+    box-shadow:2px 2px rgb(255, 192, 57);
+}
+.comments{margin:3%;}
+.comment_title{
+    font-size:200%;
+    font-weight:bold;
+}
+.comment_box{
+    border:1px solid rgb(221, 221, 255);
+    padding:3%;
+    border-radius:10px;
+}
+.user-id{
+    margin-bottom:3%;
+}
+.commentTitle{
+    font-weight:bold;
+    text-decoration:underline;
+}
