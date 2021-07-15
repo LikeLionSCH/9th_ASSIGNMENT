@@ -23,7 +23,6 @@ from diary import views as d
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', d.home, name='home'),
-    path('goAdd/', d.goAdd, name='goAdd'),
     path('add/', d.add, name='add'),
     path('detail/<str:id>', d.detail, name='detail'),
     path('delete/<str:id>', d.delete, name='delete'),

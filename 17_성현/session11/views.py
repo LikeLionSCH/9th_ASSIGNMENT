@@ -24,18 +24,20 @@ def detail(request, id):
     diarys = get_object_or_404(Diary, pk=id)
     return render(request, 'detail.html', {'diary':diarys})
 
-def goAdd(request):
-    return render(request, 'add.html')
-
 def add(request):
-    new_Diary = Diary()
-    new_Diary.title = request.POST['title']
-    new_Diary.body = request.POST['body']
-    new_Diary.weather = request.POST['weather']
-    new_Diary.photo = request.FILES['photo']
-    new_Diary.time = timezone.now()
-    new_Diary.save()
-    return redirect('home')
+    if request.method == 'POST' :
+        diaryForm = Diary(request.POST)
+        if diaryForm.is_valid():
+            new_Diary = Diary()
+            new_Diary.title = request.POST['title']
+            new_Diary.body = request.POST['body']
+            new_Diary.weather = request.POST['weather']
+            new_Diary.photo = request.FILES['photo']
+            new_Diary.time = timezone.now()
+            new_Diary.save()
+            return redirect('home')
+    else:  
+        return render(request, 'add.html')
 
 def delete(request, id):
     delete_Diary = Diary.objects.get(id = id)
