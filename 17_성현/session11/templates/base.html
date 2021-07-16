@@ -1,0 +1,50 @@
+{% load socialaccount %}
+{% providers_media_js %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% block link %} {% endblock %}">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+    <nav class="py-2 bg-light border-bottom">
+        <div class="container d-flex flex-wrap">
+          <ul class="nav me-auto">
+            <li class="nav-item"><a href="{% url 'home' %}" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="{% url 'add' %}" class="nav-link link-dark px-2">New Diary</a></li>
+            <li class="nav-item"><a href="{% url 'search' %}" class="nav-link link-dark px-2">Search</a></li>
+            <li class="nav-item"><a href="{% url 'gallery' %}" class="nav-link link-dark px-2">Gallery</a></li>
+          </ul>
+            <ul class="nav">
+                {% if user.is_authenticated %}
+                <li class="nav-item"><a class="nav-link link-dark px-2">어서오세요! {{user.username}}님!</a></li>
+                <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link link-dark px-2">Logout</a></li>
+                {% else %}
+                <li class="nav-item"><a href="{% provider_login_url 'google' %}" class="nav-link link-dark px-2">Google Login</a></li>
+                <li class="nav-item"><a href="https://accounts.google.com/signup/v2/webcreateaccount?continue=https%3A%2F%2Fwww.google.com%2F&hl=ko&gmb=exp&biz=false&flowName=GlifWebSignIn&flowEntry=SignUp" class="nav-link link-dark px-2">Google Sign up</a></li>
+                {% endif %}
+            </ul>
+        </div>
+      </nav>
+      <header class="py-3 mb-4 border-bottom">
+        <div class="container d-flex flex-wrap justify-content-center">
+          <a href="/" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <span class="fs-4">Diary</span>
+          </a>
+          <form class="col-12 col-lg-auto mb-3 mb-lg-0" action="" method="POST">
+            {% csrf_token %}
+            <input type="search" class="form-control" name="search_word" placeholder="Search..." aria-label="Search">
+          </form>
+        </div>
+      </header>
+      <div id="blockBody">
+          {% block body %} {% endblock %}
+      </div>
+</body>
+</html>

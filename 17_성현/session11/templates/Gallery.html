@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block link %} {% static 'css/gallery.css' %} {% endblock %}
+{% block title %} Gallery {% endblock %}
+    {% block body %} 
+    <h1>Gallery</h1>
+    <div id="direction">
+        {% for diaryDetail in diary %}
+        <div class="diaryDetail">
+            <span class="diaryTitle">{{diaryDetail.title}}</span><br>
+            <span><img src="{{diaryDetail.photo.url}}" width="200" height="200" ></span><br>
+            <span class="diaryTime">{{diaryDetail.time}}</span><br>
+            <a href="{% url 'detail' diaryDetail.id %}">
+                자세히 보기
+            </a><br>
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+        {% if diary.has_previous %}
+        <a href='?page={{diary.previous_page_number}}'><</a>
+        {% endif %}
+
+        <span>{{diary.number}}</span>
+        <span>/</span>
+        <span>{{diary.paginator.num_pages}}</span>
+        
+        {% if diary.has_next %}
+        <a href='?page={{diary.next_page_number}}'>></a>
+        {% endif %}
+    </div>
+    {% endblock %}
