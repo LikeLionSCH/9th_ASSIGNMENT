@@ -1,0 +1,5 @@
+.header {
+    display: flex;
+    border-bottom: 2px soild black;
+    background-color: yellow;
+}
