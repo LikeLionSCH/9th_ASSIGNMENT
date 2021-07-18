@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link %}{% static 'css/home.css' %}{% endblock %}
+{% block title %} My Page {% endblock %}
+{% block contents %}
+    <h2>내 정보</h2>
+    <span>아이디 : </span>
+    <span>{{user.username}}</span><br>
+    <span>별명 : </span>
+    <span>{{user.nickname}}</span><br>
+    <span>대학교 : </span>
+    <span>{{user.university}}</span>
+{% endblock %}

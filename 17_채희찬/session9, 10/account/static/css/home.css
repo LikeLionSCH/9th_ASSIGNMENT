@@ -1,0 +1,7 @@
+.header{
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}

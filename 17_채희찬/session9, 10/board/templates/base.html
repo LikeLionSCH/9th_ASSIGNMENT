@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}?after">
+    <link rel="stylesheet" href="{% block link %}{% endblock %}?after">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div class="header">
+        <a href="{% url 'home' %}">
+            <h2 class="home-logo">HOME</h2>
+        </a>
+        {% if user.is_authenticated %}
+            <h3>{{ user.username }} 님 환영합니다!</h3>
+            <a href="{% url 'logout' %}">
+                <button>로그아웃</button>
+            </a>
+            <a href="{% url 'mypage' %}">
+                <button>내 정보</button>
+            </a>
+            <a href="{% url 'create' %}">
+                <button>글 쓰기</button>
+            </a>
+            {% else %}
+            <h3>로그인이 필요합니다.</h3>
+            <a href="{% url 'login' %}">
+                <button>로그인</button>
+            </a>
+            <a href="{% url 'signup' %}">
+                <button>회원가입</button>
+            </a>
+        {% endif %}
+        
+    </div>
+    {% block contents %}
+    {% endblock %}
+</body>
+</html>
