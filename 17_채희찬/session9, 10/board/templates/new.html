@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block link %}{% static 'css/home.css' %}{% endblock %}
+{% block title %} login {% endblock %}
+{% block contents %}
+    <h3>[ hello! ]</h3>
+    <form method="POST" action="{% url 'create' %}">
+        {% csrf_token %}
+        <input type="text" name="title" placeholder="제목을 입력하세요.">
+        <input type="text" name="body" placeholder="내용을 입력하세요">
+        <button>글쓰기</button>
+    </form>
+{% endblock %}
