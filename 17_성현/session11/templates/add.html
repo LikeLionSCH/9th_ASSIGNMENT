@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block link %} {% static 'css/add.css' %} {% endblock %}
+{% block title %} Add Diary {% endblock %}
+    {% block body %} 
+    <h1>New Diary</h1>
+    <form action="{% url 'add' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>제목<input type="text" name="title" style="margin-left: 30px;"></p><hr>
+    <p>내용</p>
+    <textarea name="body" cols="100" rows="10"></textarea><hr>
+    <p>사진</p>
+    <input type="file" name="photo"><hr>
+    <p>날씨</p>
+    <input type="text" name="weather"><hr>
+    <input type="submit" id="submitButton" value="글 쓰기">
+    </form>
+    {% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}detail{% endblock %}
+{% block content %}
+    <h3>제목 : {{ board.title }}</h3>
+    <p>작성자 : {{ board.author }}</p>
+    <p>생성시간 : {{ board.pub_date }}</p>
+    <p>내용 : {{ board.body }}</p>
+
+    <h4>댓글 내용</h4>
+    {% for comment in board.comment_set.all %}
+        <p>댓글: {{comment.content}}</p>
+        <p>댓글쓴이: {{comment.writer}}</p>
+        {% if userinfo == comment.writer %}
+            <a href="{% url 'delete_comment' comment.id user %}">
+            <button>삭제</button>
+        </a>
+        {% endif %}
+    <br>
+    {% endfor %}
+
+    <h4>댓글 쓰기</h4>
+    <form method="POST" action="{% url 'create_comment' board.id user %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>내용 : 
+            <input type="text" name="comment">
+            <button>댓글작성</button>
+        </p>
+    </form>
+    {% if user == board.author %}
+    <a href="{% url 'edit' board.id %}">
+        <button>글 수정</button>
+    </a>
+    <a href="{% url 'delete' board.id %}">
+        <button>글 삭제</button>
+    </a>
+    {% endif %}
+{% endblock %}
