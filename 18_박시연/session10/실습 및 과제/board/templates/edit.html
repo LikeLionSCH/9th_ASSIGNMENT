@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}edit{% endblock %}
+{% block content %}
+    <form method="POST" action="{% url 'edit' board.id %}">
+        {% csrf_token %}
+        <p>제목: <input type="text" name = "title" value = "{{ board.title }}"></p>
+        <p>작성자 : {{board.author}}</p>
+        <p>생성시간 : {{board.pub_date}}</p>
+        <p>본문: <input type="text" name = "body" value = "{{ board.body }}"></p>
+        <button>수정하기</button>
+    </form>
+{% endblock %}
