@@ -1,0 +1,21 @@
+#contents{
+    display:flex;
+    flex-direction:column;
+}
+.content{
+    margin-bottom:1%;
+}
+#update_btn{
+    display:flex;
+    width:30%;
+    justify-content:space-between;
+    margin-top:5%;
+}
+.submit{
+    width:90px;
+    background-color:rgb(214, 214, 214);
+    border-radius:13px;
+    border:0.5px solid rgb(185, 185, 185);
+    box-shadow:1px 1px rgb(61, 61, 61);
+    padding:3%;
+}

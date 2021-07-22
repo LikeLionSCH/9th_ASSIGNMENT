@@ -1,0 +1,25 @@
+#diary_contents{
+    display:flex;
+    flex-flow:row wrap;
+    flex-basis:90%;
+    justify-content:space-around;
+    align-content:center;
+    align-items:center;
+    background-color:hsl(0, 7%, 92%);
+    height:30%;
+}
+.diary{
+    background-color:#dceaf7;
+    margin:1%;padding:3%;
+    flex-direction:column;
+    width:30%;height:50%;
+    align-items:center;
+    justify-content:space-around;
+    max-width:700px;
+}
+#goto_detail{
+    margin-top:3%;
+}
+.title{
+    background-color:#dceaf7;
+}
