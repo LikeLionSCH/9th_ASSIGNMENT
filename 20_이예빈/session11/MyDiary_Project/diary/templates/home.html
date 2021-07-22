@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 내 다이어리 게시판 {% endblock %}
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+{% block content %}
+
+    <div id="container">
+        
+        <div id="search">
+            <form action="{% url 'home' %}" method="get">
+                <input type="text" name="search_text" placeholder="일기 검색">
+                <button> 검색 </button>
+            </form>
+        </div>
+
+        <div id="diary_contents">
+        {% for d in diary %}
+            <div id="diary">
+                <h3 class="title"> {{d.title}} </h3>
+                <h5> 날짜 : {{d.pub_date.date}} </h5>
+                    {% if d.image %}
+                        <img src="{{d.image.url}}" height='100' alt="일기 사진 없음" />
+                    {% endif %}            
+                <div id="goto_detail">
+                    <a href="{% url 'detail' d.id %}"> 자세히 보기 </a>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+
+        <div id="nav">
+            {% if diary.has_previous %}
+            <a href="?page={{diary.previous_page_number}}"> << </a>
+            {% endif %}
+
+            <span> {{diary.number}} </span>
+            <span>/</span>
+            <span> {{diary.paginator.num_pages}}</span>
+
+            {% if diary.has_next %}
+            <a href="?page={{diary.next_page_number}}"> >> </a>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 일기 쓰기 {% endblock %}
+{% block link %} {% static 'css/new.css/' %} {% endblock %}
+{% block content %}
+
+<div id="new_diary">
+    <h2> [ 오늘의 일기 쓰기 ] </h2>
+
+    <form action="{% url 'create' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %} 
+
+        <div class="input_diary">
+            <div class="input_title"> Diary Title </div>
+            <input class="text_input" name="title" type="text">
+        </div>
+        <div class="input_diary">
+            <div class="input_title"> Today's weather </div>
+            <input class="text_input" name="weather" type="text">
+        </div>
+        <div class="input_diary">
+            <div class="input_title"> Today's Mood </div>
+            <input class="text_input" name="mood" type="text">
+        </div>
+        <div class="input_diary">
+            <div class="input_title"> Diary Contents </div>
+            <textarea id="diary_contents" name="body" type="textarea" cols="45" rows="8"> </textarea>
+        </div>
+        <div class="input_diary">
+            <div class="input_title"> Today's photo </div>
+            <input id="input_image" name="image" type="file">
+        </div>
+     
+        <div id="submit_diary">
+            <button id="submit"> Complete </button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

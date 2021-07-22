@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 내 다이어리 게시판 {% endblock %}
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+{% block content %}
+
+    <div id="diary_contents">
+    {% for d in diary %}
+        <div class="diary">
+            <h3 class="title"> <strong> {{d.title}} </strong> </h3>
+            <h5> 날짜 : {{d.pub_date.date}} </h5>
+                {% if d.image %}
+                    <img src="{{d.image.url}}" width='250' alt="일기 사진 없음" />
+                {% endif %}            
+            <div id="goto_detail">
+                <a href="{% url 'detail' d.id %}"> 자세히 보기 </a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

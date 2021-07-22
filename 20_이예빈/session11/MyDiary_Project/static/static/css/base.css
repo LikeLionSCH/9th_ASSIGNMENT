@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'IM_Hyemin-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family: 'IM_Hyemin-Regular';
+}
+body{
+    font-size:120%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+#header{
+    font-size:200%;
+    font-weight:bold;
+    height:20vh;
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+a{
+    text-decoration:none;
+    color:rgb(48, 48, 48);
+}
+a:hover{
+    color:rgb(133, 133, 133);
+}
+#beans_logo{
+    display:flex;
+    align-items:center;
+}
+#menu{
+    display:flex;
+    width:450px;
+    margin-top:1%;
+    justify-content:space-between;
+}
+a>button{
+    width:100px;
+    margin-right:1%;
+    background-color:rgb(171, 231, 186);
+    border-radius:13px;
+    border:none;
+    box-shadow:2px 2px rgb(2, 105, 37);
+    padding:3%;
+}
+a>button:hover{
+    color:white;
+    background-color:rgb(40, 104, 57);
+}
