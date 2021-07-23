@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}new{% endblock %}
+{% block content %}
+    <h3>[ 게시판 글쓰기 ]</h3>
+    <form method="POST" action="{% url 'create' %}">
+        {% csrf_token %}
+        <input name="title" type="text" placeholder="제목을 입력하세요. ">
+        <input name="body" type="text" placeholder="내용을 입력하세요. ">
+        <button>글쓰기</button>
+    </form>
+{% endblock %}
