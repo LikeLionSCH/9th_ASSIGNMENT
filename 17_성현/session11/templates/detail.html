@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block link %} {% static 'css/detail.css' %} {% endblock %}
+{% block title %} Detail {% endblock %}
+    {% block body %} 
+    <h1>{{diary.id}}번째 글</h1>
+    <div id="detailBody">
+        <span class="category">제목</span>
+        <span>{{diary.title}}</span><hr>
+        <span class="category">내용</span>
+        <span>{{diary.body}}</span><hr>
+        <span class="category">사진</span>
+        <span><img src="{{diary.photo.url}}" width="200" height="200"></span><hr>
+        <span class="category">날씨</span>
+        <span>{{diary.weather}}</span><hr>
+        <span class="category">시간</span>
+        <span>{{diary.time}}</span><hr>
+    </div>
+    <div id="buttonBox">
+        <a class="chooseButton" href="{% url 'home' %}">
+            이전
+        </a>
+        <a class="chooseButton" href="{% url 'delete' diary.id %}">
+            글 삭제
+        </a>
+    </div>
+    {% endblock %}
