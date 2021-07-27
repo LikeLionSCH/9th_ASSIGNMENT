@@ -1,0 +1,29 @@
+{% extends "base_1.html" %}
+{% load static %}
+
+{% block title %} 홈2화면 {% endblock %}
+{% block link %} {% static 'home_1.css' %} {% endblock %}
+{% block content %}
+
+    <h1>윤병수의 Django 테스트 중입니다.</h1>
+    <h2>{{notices}}</h2>
+
+    {%for a in notices%}
+    <div>
+        <h2>{{a.title}}</h2>
+        <h4>{{a.pub_date}}</h4>
+        <h4>{{a.author}}</h4>
+        <p>{{a.body}}</p>
+        <p><img src="{{ a.image.url }}" width="200" height="200" alt="안나와요" /></p>
+        <a href="{% url 'detail_1' a.id %}">자세히보기</a>
+        <!-- <a href="{% url 'detail' a.id %}">자세히보기</a> -->
+    </div>
+    <hr>
+    {% endfor %}
+{% endblock %}
+    
+</body>
+</html>
+
+
+

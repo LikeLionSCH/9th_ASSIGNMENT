@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 내 다이어리 게시판 {% endblock %}
+{% block link %} {% static 'css/detail.css' %} {% endblock %}
+{% block content %}
+
+    <div id="contents">
+        <div class="content">  <h2> {{diary.title}} </h2> </div>
+        <div class="content"> Date : {{diary.pub_date}} </div>
+        <div class="content"> Weather : {{diary.weather}} </div>
+        <div class="content"> My Mood : {{diary.mood}} </div>       
+        <div class="content"> My Diary : {{diary.body}} </div>
+
+        {% if diary.image %}
+            <img src="{{diary.image.url}}" width='400' alt="일기 사진 없음" />
+        {% endif %}
+
+        <div id="update_btn">
+            <a href="{% url 'edit' diary.id %}"><button class="submit">수정하기</button></a>
+            <a href="{% url 'delete' diary.id %}"><button class="submit">삭제하기</button></a>
+        <div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}home{% endblock %}
+{% block content %}
+    </div>
+        <h1>[게시판]</h1>
+        <hr>
+        {% for board in boards %}
+        <div>
+            <p>
+                <span>{{ board.pub_date }}</span><br>
+                <span><strong>{{ board.title }}</strong></span><br>
+                <span>{{ board.body }}</span>
+            </p>
+            <p>작성자 : {{ board.author }}</p>
+            <a href="{% url 'detail' board.id %}">자세히 보기</a>
+
+            <hr>
+        </div>
+        {% endfor %}
+{% endblock %}

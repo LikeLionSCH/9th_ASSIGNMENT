@@ -1,0 +1,26 @@
+
+.comments{margin:3%;}
+.comment_box{
+    display:flex; flex-direction:column;
+}
+.comment_box_form{
+    display:flex;
+    flex-direction:column;
+}
+.user-id{
+    margin-bottom:3%;
+}
+.user-comment{
+    font-size:larger;
+    margin-bottom:3%;
+    color:rgb(255, 255, 255);
+    background-color:rgb(255, 185, 185);
+}
+.comment-date{
+    margin-bottom:3%;
+    background-color:rgb(177, 177, 255);
+}
+.commentTitle{
+    font-weight:bold;
+    text-decoration:underline;
+}

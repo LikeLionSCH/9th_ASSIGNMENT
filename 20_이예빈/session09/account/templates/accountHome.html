@@ -1,0 +1,13 @@
+<div style="text-align:center">
+    <h3>회원가입한 멤버의 정보</h3>
+
+    {% for a in accounts %}
+
+        <div class>
+            <h3> 회원 이름 : {{a.user_name}} </h3>
+            <h3> 회원 아이디 : {{a.user_id}} </h3>
+            <div> 회원 프로필 : {{a.user_profileImg.url}} </div>
+        </div>
+
+    {% endfor %}
+</div>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}home{% endblock %}
+
+{% block content %}
+
+    <h1> [게시판] </h1>
+    <hr>
+
+    {% for board in boards %}
+    <div>
+        {% if user == board.author %}
+        <a href="{% url 'edit' board.id %}">
+            <button>수정</button>
+        </a>
+        <a href="{% url 'delete' board.id %}">
+            <button>삭제</button>
+        </a>
+        {% endif %}
+        <p>
+            <span>{{ board.pub_date }}</span><br>
+            <span><strong>{{ board.title }}</strong></span><br>
+            <span>{{ board.body }}</span><br>
+        </p>
+        <p>작성자 : {{ board.author }}</p>
+        <a href="{% url 'detail' board.id %}">자세히 보기</a>
+        <hr>
+    </div>
+    {% endfor %}
+{% endblock %}

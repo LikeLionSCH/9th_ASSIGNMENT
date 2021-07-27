@@ -1,0 +1,23 @@
+.comments{
+    width:40%;height:10%;
+    overflow-y:scroll;
+    text-align:center;
+    border:1px solid rgb(105, 105, 105);
+    border-radius:20px;
+    margin-bottom:3%;padding:0.5%;
+}
+.comment_box{
+    text-align:center;
+    border:1px solid rgb(105, 105, 105);
+    border-radius:20px;
+    margin-bottom:3%;padding:0.5%;
+}
+
+.user-id{
+    background-color:rgb(255, 233, 233);
+    border-radius:15px;
+}
+.user-comment{
+    color:white;
+    background-color:rgb(131, 131, 131);
+}

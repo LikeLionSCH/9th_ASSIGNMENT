@@ -1,0 +1,40 @@
+.borderStyle{
+    width:50%;
+    background-color:rgb(253, 253, 223);
+    border:3px solid rgb(214, 214, 214);
+    padding:3%;margin:3%;
+    border-radius:15px;
+    color:black;
+}
+.comments{margin:3%;}
+.comment_title{
+    border:1px solid sandybrown;
+}
+.comment_box{
+    display:flex; flex-direction:column;
+    border:1px solid black;
+    margin:3%;
+}
+.comment_box_form{
+    display:flex;
+    flex-direction:column;
+    border:1px solid black;
+    margin:3%;
+}
+.user-id{
+    margin-bottom:3%;
+}
+.user-comment{
+    font-size:larger;
+    margin-bottom:3%;
+    color:rgb(255, 255, 255);
+    background-color:rgb(255, 185, 185);
+}
+.comment-date{
+    margin-bottom:3%;
+    background-color:rgb(177, 177, 255);
+}
+.commentTitle{
+    font-weight:bold;
+    text-decoration:underline;
+}

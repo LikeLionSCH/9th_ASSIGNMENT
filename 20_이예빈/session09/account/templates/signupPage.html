@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+<title> 회원가입 페이지</title>
+<body>
+
+<div>
+    <form action="{% url 'accountCreate' %}" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		
+				<table>
+					<tr>
+						<td class="col1">이름</td>
+						<td><input type="text" name="name"></td>
+					</tr>
+					<tr>
+						<td class="col1">아이디</td>
+						<td><input type="text" name="id"></td>
+					</tr>
+					<tr>
+						<td class="col1">비밀번호</td>
+						<td><input type="password" name="pw"></td>
+					</tr>
+					<tr>
+						<td class="col1">프로필사진</td>
+						<td><input type="file" name="profImg"></td>
+					</tr>
+					<tr><td><button>완료</button></td>
+					</tr>
+				</table>
+		</form>
+	</div>
+</body>
+</html>

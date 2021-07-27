@@ -1,0 +1,38 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css/' %}"> 
+    <link rel="stylesheet" href="{% block link %} {% endblock %}">
+    <title> {% block title %} {% endblock %} </title>
+</head>
+<body>
+
+    <div id="header">
+        <div id="beans_logo"><a href="{% url 'home' %}"> Bean's Diary </a> <img id="logo" height="80" src="{% static 'img/Beans_icon.png' %}" alt="이미지 없음" /></div>
+        <div id="menu">
+            <a href="{% url 'home' %}"><button>홈으로</button></a> 
+            <a href="{% url 'create' %}"><button> 글쓰기 </button></a> 
+            {% if user.is_authenticated %}
+                <a href="#"> <button type="button">로그아웃</button></a>
+            {% else %}
+                <a href="{% provider_login_url 'google' %}"><button type="button"> 로그인 </button></a>
+            {% endif %}
+        </div>
+        <div id="welcome">
+            {% if user.is_authenticated %}
+               구글 계정으로 로그인 되었습니다. 
+            {% endif %}
+        </div>
+    </div>
+
+    <div id="main">
+        {% block content %} {% endblock %}
+    </div>
+
+</body>
+</html>

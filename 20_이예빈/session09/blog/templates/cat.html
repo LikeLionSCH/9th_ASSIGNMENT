@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} 고양이 화면 {% endblock %}
+{% block link %} {% static 'css/cat.css' %} {% endblock %}
+{% block content %}
+
+    <h1> 임시보호 고양이 블로그입니다 </h1>
+    <h3>고양이 구경하기</h3>
+    <hr>
+    <br><br>
+        <div id="contents">
+            {% for c in cat %}
+                <div class="contentbox">
+                    {% if c.cat_img %}
+                    <div class="image"><img class="catImg" src="{{c.cat_img.url}}" height="300" alt="냥이 사진 등록 준비중... " /></div> 
+                    {% endif %}
+                    <div class="catName">{{c.cat_name}}</div>
+                    <div class="catSex">냥이 성별: {{c.cat_sex}}</div>
+                    <div class="catTrait">{{c.cat_trait}}</div>
+                    <div class="date"> 등록 날짜 : {{c.pub_date}} </div> 
+                </div>
+            {% endfor %}
+        </div>
+{% endblock %}
