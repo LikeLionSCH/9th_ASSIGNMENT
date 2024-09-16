@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 디테일 페이지 {% endblock %}
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+
+
+
+
+{% block content %}
+    <div>   
+    <h2>글 제목 : {{ blog.title }} </h2>
+    <h4>작성자 : {{ blog.author }} </h4>
+    <h4>게시일 : {{blog.pub_date}} </h4>
+    <hr>
+    {% if blog.image %}
+    <p><img src="{{ blog.image.url }}" width="200px" height="200px"></p>
+    {% endif %}
+    {{ blog.body }}
+    <a href="{% url 'update' blog.id %}"><input type="button" value="수정하기"></a>
+    <a href="{% url 'delete' blog.id %}"><input type="button" value="삭제하기"></a>
+    </div> 
+
+    <div>
+        {% for comment in blog.comment_set.all %}
+        <h4>{{ comment.author }}</h4>
+        <p>{{ comment.content|linebreaksbr }}</p>
+        <p>{{ comment.created_at }}</p>
+        <a href="{% url 'update_comment' blog.id comment.id %}"><input type="button" value="수정하기"></a>
+        <a href="{% url 'delete_comment' blog.id comment.id %}"><input type="button" value="삭제하기"></a>
+        {% endfor %}
+    </div>
+
+    <div>
+    <h4>댓글달기</h4>
+    <form action="{% url 'create_comment' blog.id %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>작성자 : <input type="text" name="author"></p>
+        <p>댓글 : <textarea name="content" cols="20" rows="10"></textarea></p>
+        <button type="submit">submit</button>
+    </form>
+    </div>
+{% endblock %}

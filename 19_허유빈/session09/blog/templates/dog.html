@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} 강아지 화면 {% endblock %}
+{% block link %} {% static 'css/dog.css' %} {% endblock %}
+{% block content %}
+<h1>강아지</h1>
+
+{% for a in dogs %}
+<div class="bodystyle">
+    <h2>{{ a.title }}</h2>
+    <h5>{{ a.pub_date }}</h5>
+    <h5>{{ a.author }}</h5>
+    <h5>{{ a.body }}</h5>
+    {% if a.image %}
+    <p><img width="300px" height="300px" src="{{ a.image.url }}"></p>
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock %}
